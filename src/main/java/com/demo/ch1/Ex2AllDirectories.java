@@ -14,8 +14,8 @@ public class Ex2AllDirectories {
     public static void allDirectories(String path)
     {
         File file = new File(path);
-        if (!file.listFiles())
-        /*{
+        /*if (!file.listFiles())
+        {
 
         }*/
     }
