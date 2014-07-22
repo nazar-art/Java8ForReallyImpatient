@@ -2,6 +2,8 @@ package com.demo.ch1;
 
 
 import java.io.File;
+import java.util.Arrays;
+import java.util.Comparator;
 
 /**
  * Using the listFiles(FileFilter) and isDirectory methods of the java.io.File class,
@@ -11,9 +13,8 @@ import java.io.File;
  */
 public class Ex2AllDirectories {
 
-    public static void allDirectories(String path)
+    public static void allDirectories(File file)
     {
-        File file = new File(path);
         File[] listOfFiles = file.listFiles(pathname -> true);
         if (listOfFiles != null)
         {
@@ -21,18 +22,16 @@ public class Ex2AllDirectories {
             {
                 if (listOfFile.isDirectory())
                 {
-                    allDirectories(listOfFile.getPath());
+                    allDirectories(listOfFile);
                     System.out.printf("Directory: %s%n", listOfFile.getAbsolutePath());
                 }
             }
         }
     }
 
-    public static void allFiles(String path)
+    public static void allFiles(File file)
     {
-        File file = new File(path);
         File[] listOfFiles = file.listFiles(pathname -> true);
-//        Arrays.sort(listOfFiles, 0, listOfFiles.length);
         for (File listOfFile : listOfFiles)
         {
             if (listOfFile.isFile())
@@ -40,16 +39,30 @@ public class Ex2AllDirectories {
                 System.out.printf("File: %s%n", listOfFile.getName());
             } else
             {
-                allFiles(listOfFile.getAbsolutePath());
+                allFiles(listOfFile);
             }
         }
     }
 
+    /**
+     * Given an array of File objects, sort it so that the directories come before the files,
+     * and within each group, elements are sorted by path name.
+     * Use a lambda expression, not a Comparator
+     * @param file start file object
+     */
+    public static void sortDirectoryContent(File file)
+    {
+        File[] files = file.listFiles();
+        Arrays.sort(files, Comparator.comparing(File::isDirectory));
+        Arrays.toString(files);
+    }
 
     public static void main(String[] args)
     {
-        allDirectories(".");
+//        allDirectories(new File("."));
         System.out.println("========================");
-        allFiles(".");
+//        allFiles(new File("."));
+        System.out.println("========================");
+        sortDirectoryContent(new File("."));
     }
 }
