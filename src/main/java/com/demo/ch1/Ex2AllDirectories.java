@@ -14,15 +14,42 @@ public class Ex2AllDirectories {
     public static void allDirectories(String path)
     {
         File file = new File(path);
-        /*if (!file.listFiles())
+        File[] listOfFiles = file.listFiles(pathname -> true);
+        if (listOfFiles != null)
         {
-
-        }*/
+            for (File listOfFile : listOfFiles)
+            {
+                if (listOfFile.isDirectory())
+                {
+                    allDirectories(listOfFile.getPath());
+                    System.out.printf("Directory: %s%n", listOfFile.getAbsolutePath());
+                }
+            }
+        }
     }
+
+    public static void allFiles(String path)
+    {
+        File file = new File(path);
+        File[] listOfFiles = file.listFiles(pathname -> true);
+//        Arrays.sort(listOfFiles, 0, listOfFiles.length);
+        for (File listOfFile : listOfFiles)
+        {
+            if (listOfFile.isFile())
+            {
+                System.out.printf("File: %s%n", listOfFile.getName());
+            } else
+            {
+                allFiles(listOfFile.getAbsolutePath());
+            }
+        }
+    }
+
 
     public static void main(String[] args)
     {
-        String path = ".";
-
+        allDirectories(".");
+        System.out.println("========================");
+        allFiles(".");
     }
 }
