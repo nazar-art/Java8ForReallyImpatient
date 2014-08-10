@@ -11,6 +11,7 @@ public class OptionalType
     public static void main(String[] args) throws IOException
     {
         String contents = new String(Files.readAllBytes(Paths.get(Test.ALICE_PATH)), StandardCharsets.UTF_8);
+
         List<String> wordList = Arrays.asList(contents.split("[\\P{L}]+"));
 
         Optional<String> optionalValue = wordList.stream().filter(s -> s.contains("red")).findFirst();
@@ -20,15 +21,16 @@ public class OptionalType
         Set<String> results = new HashSet<>();
         optionalValue.ifPresent(results::add);
         Optional<Boolean> added = optionalValue.map(results::add);
+
         System.out.println(added);
 
         optionalValue = wordList.stream().filter(s -> s.contains("fred")).findFirst();
-
-        System.out.print(optionalValue.orElse("No word") + " contains fred");
+        System.out.println(optionalValue.orElse("No word") + " contains fred");
 
         Optional<String> optionalString = Optional.empty();
         String result = optionalString.orElse("N/A");
         System.out.println("result: " + result);
+
         result = optionalString.orElseGet(() -> System.getProperty("user.dir"));
         System.out.println("result: " + result);
         try {

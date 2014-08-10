@@ -1,5 +1,6 @@
 package com.demo.ch2;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -11,7 +12,7 @@ import java.util.stream.Stream;
 public class Test
 {
 
-    public static final String ALICE_PATH = "src\\main\\resources\\alice.txt";
+    public static final String ALICE_PATH = new StringBuilder().append("src").append(File.separator).append("main").append(File.separator).append("resources").append(File.separator).append("alice.txt").toString();
 
     public static void main(String[] args) throws IOException
     {
