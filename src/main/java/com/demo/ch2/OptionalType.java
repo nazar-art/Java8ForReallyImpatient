@@ -6,10 +6,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 
-public class OptionalType
-{
-    public static void main(String[] args) throws IOException
-    {
+public class OptionalType {
+    public static void main(String[] args) throws IOException {
         String contents = new String(Files.readAllBytes(Paths.get(Test.ALICE_PATH)), StandardCharsets.UTF_8);
 
         List<String> wordList = Arrays.asList(contents.split("[\\P{L}]+"));
@@ -40,7 +38,7 @@ public class OptionalType
             t.printStackTrace();
         }
 
-
+        System.out.println("OPTIONAL COMPUTATION:");
         System.out.println(inverse(4.0).flatMap(OptionalType::squareRoot));
         System.out.println(inverse(-1.0).flatMap(OptionalType::squareRoot));
         System.out.println(inverse(0.0).flatMap(OptionalType::squareRoot));

@@ -18,7 +18,7 @@ public class OptionalReduce {
         System.out.println("sum: " + sum);
 
         values = Stream.empty();
-        sum = values.reduce((x, y) -> x + y); // Or values.reduce(Integer::sum);
+        sum = values.reduce(Integer::sum); // Or values.reduce(Integer::sum);
         System.out.println("sum: " + sum);
 
         values = Stream.of(digits);
@@ -30,13 +30,13 @@ public class OptionalReduce {
         System.out.println("sum3: " + sum3);
 
         String contents = new String(Files.readAllBytes(Paths.get(Test.ALICE_PATH)), StandardCharsets.UTF_8);
-        List<String> wordList = Arrays.asList(contents.split("[\\P{L}]+"));
+        List<String> wordList = Arrays.asList(contents.split("[\\P{L}]+ "));
         Stream<String> words = wordList.stream();
 
-        int result = words.reduce(0,
+        /*int result = words.reduce(0,
                 (s, w) -> s + w.length(),
-                (s1, s2) -> s1 + s2);
-
-        System.out.println("result: " + result);
+                (s1, s2) -> s1 + s2);*/
+//        System.out.println("result: " + result);
+        System.out.println("simpler result: " + words.mapToInt(String::length).sum());
     }
 }

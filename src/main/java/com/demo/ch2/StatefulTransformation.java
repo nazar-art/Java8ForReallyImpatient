@@ -10,8 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class StatefulTransformation
-{
+public class StatefulTransformation {
     public static <T> void show(String title, Stream<T> stream) {
         final int SIZE = 10;
         List<T> firstElements = stream.limit(SIZE + 1).collect(Collectors.toList());
@@ -25,8 +24,7 @@ public class StatefulTransformation
         }
     }
 
-    public static void main(String[] args) throws IOException
-    {
+    public static void main(String[] args) throws IOException {
         Stream<String> uniqueWords = Stream.of("merrily", "merrily", "merrily", "gently").distinct();
 
         show("uniqueWords", uniqueWords);

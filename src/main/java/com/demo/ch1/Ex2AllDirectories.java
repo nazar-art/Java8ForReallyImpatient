@@ -13,15 +13,11 @@ import java.util.Comparator;
  */
 public class Ex2AllDirectories {
 
-    public static void allDirectories(File file)
-    {
+    public static void allDirectories(File file) {
         File[] listOfFiles = file.listFiles(pathname -> true);
-        if (listOfFiles != null)
-        {
-            for (File listOfFile : listOfFiles)
-            {
-                if (listOfFile.isDirectory())
-                {
+        if (listOfFiles != null) {
+            for (File listOfFile : listOfFiles) {
+                if (listOfFile.isDirectory()) {
                     allDirectories(listOfFile);
                     System.out.printf("Directory: %s%n", listOfFile.getAbsolutePath());
                 }
@@ -29,16 +25,12 @@ public class Ex2AllDirectories {
         }
     }
 
-    public static void allFiles(File file)
-    {
+    public static void allFiles(File file) {
         File[] listOfFiles = file.listFiles(pathname -> true);
-        for (File listOfFile : listOfFiles)
-        {
-            if (listOfFile.isFile())
-            {
+        for (File listOfFile : listOfFiles) {
+            if (listOfFile.isFile()) {
                 System.out.printf("File: %s%n", listOfFile.getName());
-            } else
-            {
+            } else {
                 allFiles(listOfFile);
             }
         }
@@ -48,17 +40,16 @@ public class Ex2AllDirectories {
      * Given an array of File objects, sort it so that the directories come before the files,
      * and within each group, elements are sorted by path name.
      * Use a lambda expression, not a Comparator
+     *
      * @param file start file object
      */
-    public static void sortDirectoryContent(File file)
-    {
+    public static void sortDirectoryContent(File file) {
         File[] files = file.listFiles();
         Arrays.sort(files, Comparator.comparing(File::isDirectory));
         Arrays.toString(files);
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
 //        allDirectories(new File("."));
         System.out.println("========================");
 //        allFiles(new File("."));

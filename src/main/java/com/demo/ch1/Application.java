@@ -16,7 +16,9 @@ public class Application {
     }
 
     public void doWork() {
-        Runnable runner = () -> { System.out.println(this.toString()); };
+        Runnable runner = () -> {
+            System.out.println(this.toString());
+        };
         runner.run();
         // Prints Application@... since this refers to an Application object
     }
