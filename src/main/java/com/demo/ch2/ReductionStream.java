@@ -9,10 +9,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-public class ReductionStream
-{
-    public static void main(String[] args) throws IOException
-    {
+public class ReductionStream {
+    public static void main(String[] args) throws IOException {
         String contents = new String(Files.readAllBytes(Paths.get(Test.ALICE_PATH)), StandardCharsets.UTF_8);
         List<String> wordList = Arrays.asList(contents.split("[\\P{L}]+"));
 
@@ -24,12 +22,12 @@ public class ReductionStream
 
         words = wordList.stream();
         boolean aWordStartsWithQ = words.anyMatch(s -> s.startsWith("Q"));
-        System.out.println("aWordStartsWithQ: " + aWordStartsWithQ);
+        System.out.println("a Word Starts With Q: " + aWordStartsWithQ);
 
         words = wordList.stream();
         Optional<String> startsWithQ = words.parallel().filter(s -> s.startsWith("Q")).findAny();
         if (startsWithQ.isPresent())
-            System.out.println("startsWithQ: " + startsWithQ.get());
+            System.out.println("starts With Q: " + startsWithQ.get());
         else
             System.out.println("No word starts with Q");
     }

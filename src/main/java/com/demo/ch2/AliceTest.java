@@ -51,7 +51,7 @@ public class AliceTest {
         show("wordsAnotherWay", wordsAnotherWay);
 
         try (Stream<String> lines = Files.lines(path, StandardCharsets.UTF_8)) {
-            show ("lines", lines);
+            show("lines", lines);
         }
     }
 }

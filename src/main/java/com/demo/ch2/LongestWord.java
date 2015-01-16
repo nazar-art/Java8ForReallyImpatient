@@ -10,8 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class LongestWord
-{
+public class LongestWord {
     public static <T> void show(String title, Stream<T> stream) {
         final int SIZE = 10;
         List<T> firstElements = stream.limit(SIZE + 1).collect(Collectors.toList());
@@ -31,8 +30,7 @@ public class LongestWord
         return result.stream();
     }
 
-    public static void main(String[] args) throws IOException
-    {
+    public static void main(String[] args) throws IOException {
         String contents = new String(Files.readAllBytes(Paths.get(Test.ALICE_PATH)), StandardCharsets.UTF_8);
         List<String> wordList = Arrays.asList(contents.split("[\\P{L}]+"));
         Stream<String> words = wordList.stream();

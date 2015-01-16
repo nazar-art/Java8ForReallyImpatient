@@ -1,5 +1,6 @@
 package com.demo.ch2;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -8,13 +9,11 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class Test
-{
+public class Test {
 
-    public static final String ALICE_PATH = "src\\main\\resources\\alice.txt";
+    public static final String ALICE_PATH = "src" + File.separator + "main" + File.separator + "resources" + File.separator + "alice.txt";
 
-    public static void main(String[] args) throws IOException
-    {
+    public static void main(String[] args) throws IOException {
         String contents = new String(Files.readAllBytes(Paths.get(ALICE_PATH)), StandardCharsets.UTF_8);
         List<String> words = Arrays.asList(contents.split("[\\P{L}]+"));
 
