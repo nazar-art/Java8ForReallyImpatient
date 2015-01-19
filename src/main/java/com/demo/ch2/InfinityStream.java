@@ -5,8 +5,8 @@ import java.util.stream.Stream;
 
 public class InfinityStream {
     public static void main(String[] args) {
-//        infinityStream();
-        limitStream();
+        infinityStream();
+//        limitStream();
     }
 
     private static void limitStream() {
@@ -15,7 +15,7 @@ public class InfinityStream {
     }
 
     private static void infinityStream() {
-        Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE));
+        Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(100);
         integers.forEach(System.out::println);
     }
 }
