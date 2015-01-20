@@ -56,6 +56,7 @@ public class CollectingIntoMaps {
 
         System.out.println("idToPerson: " + idToPerson.getClass().getName() + idToPerson);
 
+        System.out.println();
         Stream<Locale> locales = Stream.of(Locale.getAvailableLocales());
         Map<String, String> languageNames = locales.collect(
                 Collectors.toMap(
@@ -64,6 +65,7 @@ public class CollectingIntoMaps {
                         (existingValue, newValue) -> existingValue));
         System.out.println("languageNames: " + languageNames);
 
+        System.out.println();
         locales = Stream.of(Locale.getAvailableLocales());
         Map<String, Set<String>> countryLanguageSets = locales.collect(
                 Collectors.toMap(

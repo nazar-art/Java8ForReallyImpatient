@@ -12,7 +12,8 @@ import static java.util.stream.Collectors.*;
 
 class City {
 
-    public static final String CITIES_PATH = "src" + File.separator + "main" + File.separator + "resources" + File.separator + "cities.txt";
+    public static final String CITIES_PATH = "src" + File.separator + "main" + File.separator + "resources"
+            + File.separator + "cities.txt";
 
     private String name;
     private String state;

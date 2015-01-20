@@ -46,7 +46,7 @@ public class LongestWord {
         show("firstChars", firstChars);
 
         song = Stream.of("row", "row", "row", "your", "boat", "gently", "down", "the", "stream");
-        Stream<Character> letters = song.flatMap(w -> characterStream(w));
+        Stream<Character> letters = song.flatMap(LongestWord::characterStream);
         show("letters", letters);
     }
 }
