@@ -1,7 +1,7 @@
 package com.tasks.capitel6;
 
 import com.tasks.Exercise;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;

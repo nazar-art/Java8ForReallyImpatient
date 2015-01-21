@@ -1,13 +1,13 @@
 package com.tasks.capitel8;
 
 import com.tasks.Exercise;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.*;
 import static org.testng.Assert.assertTrue;
 
 /**

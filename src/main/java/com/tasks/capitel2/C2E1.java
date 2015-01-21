@@ -1,7 +1,7 @@
 package com.tasks.capitel2;
 
 import com.tasks.Exercise;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -12,10 +12,14 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 /**
- * Date: 28.10.14
+ * Write a parallel version of the for loop in Section 2.1, “From Iteration to
+ * Stream Operations,” on page 22. Obtain the number of processors. Make that
+ * many separate threads, each working on a segment of the list, and total up
+ * the results as they come in. (You don’t want the threads to update a single
+ * counter. Why?)
  */
 public class C2E1 implements Exercise {
 
@@ -23,7 +27,7 @@ public class C2E1 implements Exercise {
     @Override
     public void perform() {
         List<String> words = getWordsAsList();
-        assertEquals(words.stream().filter(s -> s.length() > 12).count(), countConcurrentWithoutStreams(words));
+        assertEquals(words.parallelStream().filter(s -> s.length() > 12).count(), countConcurrentWithoutStreams(words));
     }
 
     private static long countConcurrentWithoutStreams(List<String> words) {

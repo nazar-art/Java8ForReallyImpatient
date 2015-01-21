@@ -1,7 +1,7 @@
 package com.tasks.capitel3;
 
 import com.tasks.Exercise;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;

@@ -1,14 +1,15 @@
 package com.tasks.capitel2;
 
 import com.tasks.Exercise;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.util.stream.Stream;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 /**
- * Date: 29.10.14
+ * Write a call to reduce that can be used to compute the average of a Stream<Double>.
+ * Why can’t you simply compute the sum and divide by count()?
  */
 public class C2E10 implements Exercise {
 

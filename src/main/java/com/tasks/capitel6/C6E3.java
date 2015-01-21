@@ -1,6 +1,6 @@
 package com.tasks.capitel6;
 
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.LongAdder;
 import java.util.stream.IntStream;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 /**
  * Date: 30.11.14

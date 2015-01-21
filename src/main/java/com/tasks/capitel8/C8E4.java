@@ -1,13 +1,13 @@
 package com.tasks.capitel8;
 
 import com.tasks.Exercise;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.math.BigInteger;
 import java.util.Random;
 import java.util.stream.Stream;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 /**
  * Date: 07.12.14

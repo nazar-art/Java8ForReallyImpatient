@@ -1,7 +1,7 @@
 package com.tasks.capitel1;
 
 import com.tasks.Exercise;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.io.File;
 import java.util.Arrays;

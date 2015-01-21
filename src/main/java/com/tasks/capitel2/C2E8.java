@@ -1,15 +1,18 @@
 package com.tasks.capitel2;
 
 import com.tasks.Exercise;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.util.Iterator;
 import java.util.stream.Stream;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.*;
+
 
 /**
- * Date: 28.10.14
+ * Write a method public static <T> Stream<T> zip(Stream<T> first, Stream<T> second)
+ * that alternates elements from the streams first and second, stopping when
+ * one of them runs out of elements.
  */
 public class C2E8 implements Exercise {
 
@@ -18,6 +21,7 @@ public class C2E8 implements Exercise {
     public void perform() {
         Stream<String> stream = zip(Stream.of("1", "2", "3"), Stream.of("a", "b"));
         assertEquals(4, stream.peek(System.out::println).count());
+        System.out.println();
         stream = zip(Stream.of("1", "2", "3"), Stream.of("a", "b", "d", "e"));
         assertEquals(6, stream.peek(System.out::println).count());
     }

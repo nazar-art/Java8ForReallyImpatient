@@ -1,7 +1,7 @@
 package com.tasks.capitel3;
 
 import com.tasks.Exercise;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.util.function.BooleanSupplier;
 
@@ -10,7 +10,7 @@ import java.util.function.BooleanSupplier;
  */
 public class C3E3 implements Exercise {
 
-    @Test(expectedExceptions = AssertionError.class)
+    @Test(expected = AssertionError.class)
     @Override
     public void perform() {
         assertThat(() -> 2 * 2 == 5);

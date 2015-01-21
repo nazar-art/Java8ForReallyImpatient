@@ -1,7 +1,7 @@
 package com.tasks.capitel2;
 
 import com.tasks.Exercise;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,10 +10,13 @@ import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 /**
- * Date: 29.10.14
+ * It should be possible to concurrently collect stream results in a single ArrayList,
+ * instead of merging multiple array lists, provided it has been constructed with
+ * the stream’s size, since concurrent set operations at disjoint positions
+ * are thread safe. How can you achieve that?
  */
 public class C2E11 implements Exercise {
 
@@ -24,7 +27,10 @@ public class C2E11 implements Exercise {
         list.add(new ArrayList<>(Arrays.asList("01", "02", "03")));
         list.add(new ArrayList<>(Arrays.asList("04", "05")));
         list.add(new ArrayList<>(Arrays.asList("06", "07", "08", "09", "10")));
-        assertEquals(10, collect(list.stream()).size());
+
+        List<String> stringList = collect(list.stream());
+        assertEquals(10, stringList.size());
+        stringList.forEach(System.out::println);
     }
 
 

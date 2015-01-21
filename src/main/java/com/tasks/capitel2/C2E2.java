@@ -1,12 +1,13 @@
 package com.tasks.capitel2;
 
 import com.tasks.Exercise;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.util.List;
 
 /**
- * Date: 28.10.14
+ * Verify that asking for the first five long words does not call the filter method
+ * once the fifth long word has been found. Simply log each method call.
  */
 public class C2E2 implements Exercise {
 

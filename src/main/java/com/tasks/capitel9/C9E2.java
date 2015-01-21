@@ -1,13 +1,13 @@
 package com.tasks.capitel9;
 
 import com.tasks.Exercise;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.io.PrintWriter;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.*;
 import static org.junit.Assert.fail;
 
 /**

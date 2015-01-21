@@ -1,11 +1,11 @@
 package com.tasks.capitel3;
 
 import com.tasks.Exercise;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.util.function.BiFunction;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 /**
  * Date: 15.11.14

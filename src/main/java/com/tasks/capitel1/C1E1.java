@@ -1,13 +1,12 @@
 package com.tasks.capitel1;
 
 import com.tasks.Exercise;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.concurrent.CopyOnWriteArraySet;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 /**
  * Is the comparator code in the Arrays.sort method called in the same thread as
@@ -26,8 +25,8 @@ public class C1E1 implements Exercise {
             threadIds.add(Thread.currentThread().getId());
             return a.compareTo(b);
         });
-        assertEquals(1, threadIds.size(), "executed at different threads");
-        assertEquals(currentThreadId, threadIds.toArray()[0], "executed at threads with different id's");
+        assertEquals(1, threadIds.size());
+        assertEquals(currentThreadId, threadIds.toArray()[0]);
 
         //parallelSort
         threadIds.clear();
@@ -35,7 +34,7 @@ public class C1E1 implements Exercise {
             threadIds.add(Thread.currentThread().getId());
             return a.compareTo(b);
         });
-        assertTrue(threadIds.size() > 1, "executed at one thread");
+        assertTrue(threadIds.size() > 1);
     }
 
 }

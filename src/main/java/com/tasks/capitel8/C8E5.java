@@ -1,11 +1,11 @@
 package com.tasks.capitel8;
 
 import com.tasks.Exercise;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.util.ArrayList;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 /**
  * Date: 08.12.14

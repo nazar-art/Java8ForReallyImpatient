@@ -3,7 +3,7 @@ package com.tasks.capitel4;
 import com.tasks.Exercise;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import static org.junit.Assert.*;
 

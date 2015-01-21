@@ -1,12 +1,12 @@
 package com.tasks.capitel6;
 
 import com.tasks.Exercise;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 /**
  * Date: 03.12.14

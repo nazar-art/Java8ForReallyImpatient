@@ -1,13 +1,13 @@
 package com.tasks.capitel8;
 
 import com.tasks.Exercise;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.util.Arrays;
 
 import static java.util.Comparator.nullsLast;
 import static java.util.Comparator.reverseOrder;
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.*;
 import static org.junit.Assert.assertNull;
 
 /**

@@ -1,7 +1,7 @@
 package com.tasks.capitel1;
 
 import com.tasks.Exercise;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 /**
  * Didn’t you always hate it that you had to deal with checked exceptions in a

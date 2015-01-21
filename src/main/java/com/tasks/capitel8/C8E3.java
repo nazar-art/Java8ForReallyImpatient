@@ -1,11 +1,11 @@
 package com.tasks.capitel8;
 
 import com.tasks.Exercise;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import static java.lang.Math.floorMod;
 import static java.lang.StrictMath.abs;
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 /**
  * Date: 06.12.14

@@ -1,7 +1,7 @@
 package com.tasks.capitel1;
 
 import com.tasks.Exercise;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 /**
  * Write a static method andThen() that takes as parameters two Runnable instances

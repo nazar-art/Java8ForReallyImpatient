@@ -1,13 +1,13 @@
 package com.tasks.capitel5;
 
 import com.tasks.Exercise;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.Period;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 /**
  * Date: 23.11.14

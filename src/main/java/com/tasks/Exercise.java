@@ -11,8 +11,9 @@ import java.util.List;
  */
 public interface Exercise {
 
-    String WORDS_SPLITTER = "[\\P{L}]+";
-    String ALICE_FILE = "/alice.txt";
+    public String WORDS_SPLITTER = "[\\P{L}]+";
+    public String ALICE_FILE = "/alice.txt";
+    public String WAR_AND_PEACE_FILE = "/war-and-peace.txt";
 
     void perform();
 
@@ -36,6 +37,19 @@ public interface Exercise {
                     Paths.get(this.getClass().getResource(ALICE_FILE).toURI())),
                     StandardCharsets.UTF_8);
             return content.split(WORDS_SPLITTER);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+    }
+
+    default List<String> getWordsAsListForPeace() {
+        String content;
+        try {
+            content = new String(Files.readAllBytes(
+                    Paths.get(this.getClass().getResource(WAR_AND_PEACE_FILE).toURI())),
+                    StandardCharsets.UTF_8);
+            return Arrays.asList(content.split(WORDS_SPLITTER));
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException(e);

@@ -3,7 +3,7 @@ package com.tasks.capitel8;
 import com.tasks.Exercise;
 import javafx.geometry.Point2D;
 import javafx.geometry.Rectangle2D;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.util.Comparator;
 

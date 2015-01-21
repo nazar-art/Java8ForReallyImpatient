@@ -1,7 +1,7 @@
 package com.tasks.capitel8;
 
 import com.tasks.Exercise;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.net.URL;
 import java.util.Collections;
@@ -13,7 +13,7 @@ import java.util.Queue;
  */
 public class C8E8 implements Exercise {
 
-    @Test(expectedExceptions = ClassCastException.class)
+    @Test(expected = ClassCastException.class)
     @Override
     public void perform() {
         Queue<URL> queue = Collections.checkedQueue(new LinkedList<>(), URL.class);

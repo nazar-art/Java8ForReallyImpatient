@@ -1,12 +1,17 @@
 package com.tasks.capitel2;
 
 import com.tasks.Exercise;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * Count all short words in a parallel Stream<String>, as described in Section 2.13,
+ * “Parallel Streams,” on page 40, by updating an array of AtomicInteger. Use
+ * the atomic getAndIncrement method to safely increment each counter.
+ */
 public class C2E12 implements Exercise {
 
     @Test

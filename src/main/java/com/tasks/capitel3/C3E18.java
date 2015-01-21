@@ -1,7 +1,7 @@
 package com.tasks.capitel3;
 
 import com.tasks.Exercise;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -18,7 +18,7 @@ public class C3E18 implements Exercise {
     }
 
     @Override
-    @Test(expectedExceptions = RuntimeException.class)
+    @Test(expected = RuntimeException.class)
     public void perform() {
         unchecked((String p) -> Files.readAllBytes(Paths.get(p)).length).apply("/dummy.txt");
     }
