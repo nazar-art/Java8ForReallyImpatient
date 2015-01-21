@@ -6,9 +6,6 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Date: 27.10.14
- */
 public interface Exercise {
 
     public String WORDS_SPLITTER = "[\\P{L}]+";
