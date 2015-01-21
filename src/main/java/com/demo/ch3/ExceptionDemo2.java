@@ -21,7 +21,8 @@ public class ExceptionDemo2 {
 
     public static void main(String[] args) {
 //        Supplier<String> s = unchecked(() -> new String(Files.readAllBytes(Paths.get("/etc/passwd")), StandardCharsets.UTF_8));
-        Supplier<String> s = unchecked(() -> new String(Files.readAllBytes(Paths.get("./src/main/resources/alice.txt")), StandardCharsets.UTF_8));
+        Supplier<String> s = unchecked(() -> new String(Files.readAllBytes(Paths.get("./src/main/resources/alice.txt")),
+                StandardCharsets.UTF_8));
         System.out.println(s.get());
     }
 }
