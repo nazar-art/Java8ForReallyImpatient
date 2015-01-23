@@ -8,13 +8,13 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 /**
- * Date: 22.11.14
+ * Find out how to set the border of a control without using CSS.
  */
 public class C4E7 extends Application {
 
     public void start(Stage stage) {
         BorderPane pane = new BorderPane();
-        Label label = new Label("Test");
+        Label label = new Label("This is a Test");
         label.setBorder(new Border(
                 new BorderStroke(
                         Color.web("0xd62645"),

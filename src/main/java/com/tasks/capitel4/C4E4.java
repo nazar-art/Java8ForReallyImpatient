@@ -11,7 +11,8 @@ import static javafx.beans.binding.Bindings.divide;
 import static javafx.beans.binding.Bindings.min;
 
 /**
- * Date: 22.11.14
+ * Enhance the program in Section 4.5, “Bindings,” on page 75 so that the circle
+ * stays centered and always touches at least two of the sides of the scene.
  */
 public class C4E4 extends Application {
 

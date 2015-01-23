@@ -17,7 +17,16 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 
 /**
- * Date: 22.11.14
+ * Write methods
+ * public static <T, R> ObservableValue<R> observe(
+ * Function<T, R> f, ObservableValue<T> t)
+ * public static <T, U, R> ObservableValue<R> observe(
+ * BiFunction<T, U, R> f, ObservableValue<T> t, ObservableValue<U> u)
+ * that return observable values whose getValue method returns the value of the
+ * lambda expression, and whose invalidation and change listeners are fired
+ * when any of the inputs become invalid or change. For example,
+ * larger.disableProperty().bind(observe(
+ * t -> t >= 100, gauge.widthProperty()));
  */
 public class C4E5 extends Application {
 

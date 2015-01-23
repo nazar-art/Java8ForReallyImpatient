@@ -8,7 +8,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 /**
- * Date: 22.11.14
+ * Center the top and bottom buttons in Figure 4–7.
  */
 public class C4E6 extends Application {
 

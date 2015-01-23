@@ -11,7 +11,8 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 /**
- * Date: 23.11.14
+ * Animate a circle, representing a planet, so it travels along an elliptical orbit.
+ * Use a PathTransition.
  */
 public class C4E9 extends Application {
 

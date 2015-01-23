@@ -26,7 +26,7 @@ public class C6E6 implements Exercise {
         ConcurrentHashMap<String, Set<File>> map = new ConcurrentHashMap<>();
         File[] files = {
                 new File(this.getClass().getResource("/alice.txt").getFile()),
-                new File(this.getClass().getResource("/person.fxml").getFile()),
+                new File(this.getClass().getResource("/fxml/person.fxml").getFile()),
         };
         Arrays.asList(files).parallelStream().forEach(f -> {
             try {

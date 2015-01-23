@@ -8,7 +8,10 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Date: 20.11.14
+ * Consider a class with many JavaFX properties, most of which are never
+ * changed from a default. Show how the property can be set up on demand,
+ * when it is set to a non default value or when the xxxProperty() method is called
+ * for the first time.
  */
 public class C4E3 implements Exercise {
 

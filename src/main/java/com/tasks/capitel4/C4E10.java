@@ -14,7 +14,8 @@ import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
 /**
- * Date: 23.11.14
+ * Using the web viewer, implement a browser with a URL bar and a back
+ * button. Hint: WebEngine.getHistory().
  */
 public class C4E10 extends Application {
 

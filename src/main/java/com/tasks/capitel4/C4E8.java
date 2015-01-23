@@ -14,7 +14,10 @@ import static org.junit.Assert.*;
 import static org.junit.Assert.assertNotNull;
 
 /**
- * Date: 22.11.14
+ * Since there is no JavaFX-specific knowledge in parsing FXML files, come up
+ * with an example where you load an object that has nothing to do with JavaFX,
+ * with some nested objects, and set the properties in FXML syntax. Extra
+ * credit if you use injection.
  */
 public class C4E8 implements Exercise, Initializable {
 
@@ -27,7 +30,7 @@ public class C4E8 implements Exercise, Initializable {
     @Override
     public void perform() {
         try {
-            FXMLLoader.load(getClass().getResource("/person.fxml"));
+            FXMLLoader.load(getClass().getResource("/fxml/person.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
