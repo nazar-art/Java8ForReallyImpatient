@@ -8,7 +8,8 @@ import java.util.function.Function;
 import static org.junit.Assert.*;
 
 /**
- * Date: 15.11.14
+ * Define a map operation for a class Pair<T> that represents a pair of objects of
+ * type T.
  */
 public class C3E23 implements Exercise {
 

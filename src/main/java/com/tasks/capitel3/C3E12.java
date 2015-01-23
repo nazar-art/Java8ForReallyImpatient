@@ -14,7 +14,9 @@ import java.util.List;
 import java.util.function.UnaryOperator;
 
 /**
- * Date: 02.11.14
+ * Enhance the LatentImage class in Section 3.6, “Laziness,” on page 56, so that it
+ * supports both UnaryOperator<Color> and ColorTransformer. Hint: Adapt the former
+ * to the latter.
  */
 public class C3E12 extends Application {
 

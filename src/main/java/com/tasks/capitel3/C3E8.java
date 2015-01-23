@@ -10,7 +10,8 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 /**
- * Date: 02.11.14
+ * Generalize Exercise 5 by writing a static method that yields a ColorTransformer
+ * that adds a frame of arbitrary thickness and color to an image.
  */
 public class C3E8 extends Application {
 

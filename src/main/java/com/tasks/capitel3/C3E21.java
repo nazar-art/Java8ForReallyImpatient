@@ -9,7 +9,9 @@ import java.util.function.Function;
 import static org.junit.Assert.*;
 
 /**
- * Date: 15.11.14
+ * Supply a static method <T, U> Future<U> map(Future<T>, Function<T, U>). Return an
+ * object of an anonymous class that implements all methods of the Future
+ * interface. In the get methods, invoke the function.
  */
 public class C3E21 implements Exercise {
 

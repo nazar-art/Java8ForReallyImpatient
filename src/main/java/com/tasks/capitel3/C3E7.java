@@ -11,7 +11,9 @@ import static com.tasks.capitel3.CompareOptions.*;
 import static org.junit.Assert.assertArrayEquals;
 
 /**
- * Date: 01.11.14
+ * Write a method that generates a Comparator<String> that can be normal or reversed,
+ * case-sensitive or case-insensitive, space-sensitive or space-insensitive,
+ * or any combination thereof. Your method should return a lambda expression.
  */
 public class C3E7 implements Exercise {
 
@@ -28,17 +30,14 @@ public class C3E7 implements Exercise {
                 CASE_INSENSITIVE,
                 SPACE_INSENSITIVE
         )));
-        assertArrayEquals(values, new String[]{
+        String[] expectedArray = {
                 " ccc",
                 "BBB",
                 "aaa"
-        });
+        };
+        assertArrayEquals(values, expectedArray);
         Arrays.sort(values, comparatorGenerator(EnumSet.noneOf(CompareOptions.class)));
-        assertArrayEquals(values, new String[]{
-                " ccc",
-                "BBB",
-                "aaa"
-        });
+        assertArrayEquals(values, expectedArray);
     }
 
     public Comparator<String> comparatorGenerator(EnumSet<CompareOptions> options) {

@@ -14,7 +14,8 @@ import java.util.List;
 import java.util.function.UnaryOperator;
 
 /**
- * Date: 10.11.14
+ * Combine the lazy evaluation of Section 3.6, “Laziness,” on page 56, with the
+ * parallel evaluation of Section 3.7, “Parallelizing Operations,” on page 57.
  */
 public class C3E15 extends Application {
 

@@ -7,7 +7,9 @@ import java.util.function.BiConsumer;
 import java.util.function.Supplier;
 
 /**
- * Date: 14.11.14
+ * Implement the doInOrderAsync of Section 3.8, “Dealing with Exceptions,” on
+ * page 58, where the second parameter is a BiConsumer<T, Throwable>. Provide
+ * a plausible use case. Do you still need the third parameter?
  */
 public class C3E16 implements Exercise {
 

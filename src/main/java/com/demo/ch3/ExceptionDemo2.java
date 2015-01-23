@@ -13,8 +13,6 @@ public class ExceptionDemo2 {
                 return f.call();
             } catch (Exception e) {
                 throw new RuntimeException(e);
-            } catch (Throwable t) {
-                throw t;
             }
         };
     }

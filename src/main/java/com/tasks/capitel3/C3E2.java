@@ -6,7 +6,16 @@ import org.junit.Test;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * Date: 01.11.14
+ * When you use a ReentrantLock, you are required to lock and unlock with the
+ * idiom
+ * myLock.lock();
+ * try {
+ * some action
+ * } finally {
+ * myLock.unlock();
+ * }
+ * Provide a method withLock so that one can call
+ * withLock(myLock, () -> { some action })
  */
 public class C3E2 implements Exercise {
 

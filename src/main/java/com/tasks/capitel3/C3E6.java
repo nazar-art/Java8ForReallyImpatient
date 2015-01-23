@@ -12,7 +12,9 @@ import javafx.stage.Stage;
 import java.util.function.BiFunction;
 
 /**
- * Date: 01.11.14
+ * Complete the method
+ * public static <T> Image transform(Image in, BiFunction<Color, T> f, T arg)
+ * from Section 3.4, “Returning Functions,” on page 53.
  */
 public class C3E6 extends Application {
 

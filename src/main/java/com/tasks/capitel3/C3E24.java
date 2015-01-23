@@ -8,7 +8,7 @@ import java.util.function.BiFunction;
 import static org.junit.Assert.*;
 
 /**
- * Date: 15.11.14
+ * Can you define a flatMap method for Pair<T>? If so, what is it? If not, why not?
  */
 public class C3E24 implements Exercise {
 

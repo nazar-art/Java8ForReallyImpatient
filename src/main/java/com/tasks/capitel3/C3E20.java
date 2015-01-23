@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 import static org.testng.Assert.assertTrue;
 
 /**
- * Date: 15.11.14
+ * Supply a static method <T, U> List<U> map(List<T>, Function<T, U>).
  */
 public class C3E20 implements Exercise {
 

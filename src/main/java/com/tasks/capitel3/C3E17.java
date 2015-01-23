@@ -6,7 +6,9 @@ import org.junit.Test;
 import java.util.function.Consumer;
 
 /**
- * Date: 15.11.14
+ * Implement a doInParallelAsync(Runnable first, Runnable second, Consumer<Throwable>)
+ * method that executes first and second in parallel, calling the handler if
+ * either method throws an exception.
  */
 public class C3E17 implements Exercise {
 

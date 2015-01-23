@@ -10,18 +10,29 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 /**
- * Date: 01.11.14
+ * Here is a concrete example of a ColorTransformer. We want to put a frame around
+ * an image, like this:
+ * First, implement a variant of the transform method of Section 3.3, “Choosing
+ * a Functional Interface,” on page 50, with a ColorTransformer instead of an
+ * UnaryOperator<Color>. Then call it with an appropriate lambda expression to put
+ * a 10 pixel gray frame replacing the pixels on the border of an image.
  */
+
+@FunctionalInterface
+interface ColorTransformer {
+    Color apply(int x, int y, Color colorAtXY);
+}
+
 public class C3E5 extends Application {
 
-    public static Image transform(Image in, ColorTransformer t) {
+    public static Image transform(Image in, ColorTransformer transformer) {
         int width = (int) in.getWidth();
         int height = (int) in.getHeight();
         WritableImage out = new WritableImage(width, height);
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
                 out.getPixelWriter().setColor(x, y,
-                        t.apply(x, y, in.getPixelReader().getColor(x, y)));
+                        transformer.apply(x, y, in.getPixelReader().getColor(x, y)));
             }
         }
         return out;
@@ -37,9 +48,4 @@ public class C3E5 extends Application {
         stage.setScene(new Scene(new HBox(new ImageView(image), new ImageView(newImage))));
         stage.show();
     }
-}
-
-@FunctionalInterface
-interface ColorTransformer {
-    Color apply(int x, int y, Color colorAtXY);
 }

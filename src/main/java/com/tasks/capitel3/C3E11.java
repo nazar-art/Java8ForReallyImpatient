@@ -12,7 +12,10 @@ import javafx.stage.Stage;
 import java.util.function.UnaryOperator;
 
 /**
- * Date: 02.11.14
+ * Implement static methods that can compose two ColorTransformer objects, and
+ * a static method that turns a UnaryOperator<Color> into a ColorTransformer that ignores
+ * the x- and y-coordinates. Then use these methods to add a gray frame
+ * to a brightened image. (See Exercise 5 for the gray frame.)
  */
 public class C3E11 extends Application {
 

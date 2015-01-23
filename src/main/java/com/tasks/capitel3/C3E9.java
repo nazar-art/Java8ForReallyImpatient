@@ -10,7 +10,11 @@ import java.util.Comparator;
 import static org.junit.Assert.*;
 
 /**
- * Date: 02.11.14
+ * Write a method lexicographicComparator(String... fieldNames) that yields a comparator
+ * that compares the given fields in the given order. For example, a
+ * lexicographicComparator("lastname", "firstname") takes two objects and, using
+ * reflection, gets the values of the lastname field. If they are different, return the
+ * difference, otherwise move on to the firstname field. If all fields match, return 0.
  */
 public class C3E9 implements Exercise {
 

@@ -14,7 +14,16 @@ import java.util.List;
 import java.util.function.UnaryOperator;
 
 /**
- * Date: 02.11.14
+ * Convolution filters such as blur or edge detection compute a pixel from
+ * neighboring pixels. To blur an image, replace each color value by the average
+ * of itself and its eight neighbors. For edge detection, replace each color value
+ * c with 4c – n – e – s – w, where the other colors are those of the pixel to the
+ * north, east, south, and west. Note that these cannot be implemented lazily,
+ * using the approach of Section 3.6, “Laziness,” on page 56, since they require
+ * the image from the previous stage (or at least the neighboring pixels) to have
+ * been computed. Enhance the lazy image processing to deal with these operations.
+ * Force computation of the previous stage when one of these operators
+ * is evaluated.
  */
 public class C3E13 extends Application {
 

@@ -8,7 +8,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * Date: 15.11.14
+ * Is there a flatMap operation for CompletableFuture? If so, what is it?
  */
 public class C3E22 implements Exercise {
 

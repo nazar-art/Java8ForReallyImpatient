@@ -13,7 +13,13 @@ import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
 /**
- * Date: 02.11.14
+ * Why can’t one call
+ * UnaryOperator op = Color::brighter;
+ * Image finalImage = transform(image, op.compose(Color::grayscale));
+ * Look carefully at the return type of the compose method of UnaryOperator<T>.
+ * Why is it not appropriate for the transform method? What does that say about
+ * the utility of structural and nominal types when it comes to function
+ * composition?
  */
 public class C3E10 extends Application {
 

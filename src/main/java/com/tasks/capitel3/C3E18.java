@@ -8,7 +8,10 @@ import java.nio.file.Paths;
 import java.util.function.Function;
 
 /**
- * Date: 15.11.14
+ * Implement a version of the unchecked method in Section 3.8, “Dealing with
+ * Exceptions,” on page 58, that generates a Function<T, U> from a lambda that
+ * throws checked exceptions. Note that you will need to find or provide a
+ * functional interface whose abstract method throws arbitrary exceptions.
  */
 public class C3E18 implements Exercise {
 
