@@ -30,7 +30,7 @@ public class ImageDemo2 extends Application {
     }
 
     public void start(Stage stage) {
-        Image image = new Image("queen-mary.png");
+        Image image = new Image("images/queen-mary.png");
         Image brightenedImage = transform(image, brighten(1.5));
         stage.setScene(new Scene(new HBox(new ImageView(image), new ImageView(brightenedImage))));
         stage.show();

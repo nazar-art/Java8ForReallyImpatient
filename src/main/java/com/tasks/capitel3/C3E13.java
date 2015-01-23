@@ -29,7 +29,7 @@ public class C3E13 extends Application {
 
     public void start(Stage stage) {
         try {
-            Image image = new Image("queen-mary.png");
+            Image image = new Image("images/queen-mary.png");
             Image finalImage = EnhancedLatentImage.from(image)
                     .transform(Color::brighter)
                     .transform(blur())

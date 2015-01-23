@@ -31,7 +31,7 @@ public class C3E14 extends Application {
 
     public void start(Stage stage) {
         try {
-            Image image = new Image("queen-mary.png");
+            Image image = new Image("images/queen-mary.png");
             Image finalImage = HighlyEnhancedLatentImage.from(image)
                     .transform(Color::brighter)
                     .transform(blur())

@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 public class Test {
 
-    public static final String ALICE_PATH = "src" + File.separator + "main" + File.separator + "resources" + File.separator + "alice.txt";
+    public static final String ALICE_PATH = "src" + File.separator + "main" + File.separator + "resources" + File.separator + "txt/alice.txt";
 
     public static void main(String[] args) throws IOException {
         String contents = new String(Files.readAllBytes(Paths.get(ALICE_PATH)), StandardCharsets.UTF_8);

@@ -19,7 +19,7 @@ public class C8E15 implements Exercise {
     public void perform() {
         try {
             grep(Pattern.compile("(?m)^Alice"),
-                    Paths.get(this.getClass().getResource("/alice.txt").toURI()));
+                    Paths.get(this.getClass().getResource("/txt/alice.txt").toURI()));
         } catch (Exception e) {
             e.printStackTrace();
         }

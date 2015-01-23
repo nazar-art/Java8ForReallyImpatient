@@ -21,7 +21,7 @@ import java.util.function.UnaryOperator;
 public class C3E12 extends Application {
 
     public void start(Stage stage) {
-        Image image = new Image("queen-mary.png");
+        Image image = new Image("images/queen-mary.png");
         Image finalImage = LatentImage.from(image)
                 .transform(Color::brighter)
                 .transform(Color::grayscale)

@@ -142,7 +142,7 @@ public class C9E2 implements Exercise {
         PrintWriter out = null;
         Exception cachedException = null;
         try {
-            in = new Scanner(Paths.get(C9E2.class.getResource("/alice.txt").toURI()));
+            in = new Scanner(Paths.get(C9E2.class.getResource("/txt/alice.txt").toURI()));
             try {
                 out = new PrintWriter("/fake/alice.txt");
                 while (in.hasNext()) out.println(in.next().toLowerCase());

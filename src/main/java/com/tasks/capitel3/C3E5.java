@@ -40,7 +40,7 @@ public class C3E5 extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Image image = new Image("queen-mary.png");
+        Image image = new Image("images/queen-mary.png");
         Image newImage = transform(image,
                 (x, y, c) -> (
                         x <= 10 || x >= image.getWidth() - 10

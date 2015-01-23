@@ -33,7 +33,7 @@ public class C3E6 extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Image image = new Image("queen-mary.png");
+        Image image = new Image("images/queen-mary.png");
         Image newImage = transform(image,
                 (c, factor) -> c.deriveColor(0, 1, factor, 1), 1.5
         );

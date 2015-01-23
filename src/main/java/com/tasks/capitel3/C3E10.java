@@ -38,7 +38,7 @@ public class C3E10 extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Image image = new Image("queen-mary.png");
+        Image image = new Image("images/queen-mary.png");
         Image newImage = transform(image, ((UnaryOperator<Color>) Color::brighter).compose(Color::grayscale));
         stage.setScene(new Scene(new HBox(new ImageView(image), new ImageView(newImage))));
         stage.show();

@@ -30,7 +30,7 @@ public class C3E8 extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Image image = new Image("queen-mary.png");
+        Image image = new Image("images/queen-mary.png");
         Image newImage = transform(image, transformer(image, 20, 5, Color.WHITE));
         stage.setScene(new Scene(new HBox(new ImageView(image), new ImageView(newImage))));
         stage.show();

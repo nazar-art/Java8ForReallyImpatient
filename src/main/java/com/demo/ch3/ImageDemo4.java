@@ -48,7 +48,7 @@ class LatentImage {
 
 public class ImageDemo4 extends Application {
     public void start(Stage stage) {
-        Image image = new Image("eiffel-tower.jpg");
+        Image image = new Image("images/eiffel-tower.jpg");
         Image finalImage = LatentImage.from(image)
                 .transform(Color::brighter).transform(Color::grayscale)
                 .toImage();

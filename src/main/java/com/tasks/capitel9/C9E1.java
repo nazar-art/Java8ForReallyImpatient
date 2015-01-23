@@ -22,7 +22,7 @@ public class C9E1 {
         Scanner in = null;
         PrintWriter out = null;
         try {
-            in = new Scanner(Paths.get(C9E1.class.getResource("/alice.txt").toURI()));
+            in = new Scanner(Paths.get(C9E1.class.getResource("/txt/alice.txt").toURI()));
             try {
                 out = new PrintWriter("/fake/alice.txt");
                 while (in.hasNext()) out.println(in.next().toLowerCase());

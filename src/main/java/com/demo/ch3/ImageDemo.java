@@ -42,7 +42,7 @@ public class ImageDemo extends Application {
     }
 
     public void start(Stage stage) {
-        Image image = new Image("/queen-mary.png");
+        Image image = new Image("/images/queen-mary.png");
         Image brightenedImage = transform(image, Color::brighter);
         Image image2 = transform(image,
                 (x, y, c) -> x < 10 || x > image.getWidth() - 10

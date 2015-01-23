@@ -12,9 +12,9 @@ public class C9E6 {
 
     public static void main(String[] args) {
         try {
-            List<String> lines = Files.readAllLines(Paths.get(C9E6.class.getResource("/alice.txt").toURI()));
+            List<String> lines = Files.readAllLines(Paths.get(C9E6.class.getResource("/txt/alice.txt").toURI()));
             Collections.reverse(lines);
-            Files.write(Paths.get(System.getProperty("java.io.tmpdir"), "alice.txt"), lines);
+            Files.write(Paths.get(System.getProperty("java.io.tmpdir"), "txt/alice.txt"), lines);
         } catch (Exception e) {
             e.printStackTrace();
         }

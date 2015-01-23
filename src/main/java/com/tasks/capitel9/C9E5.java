@@ -10,12 +10,12 @@ public class C9E5 {
 
     public static void main(String[] args) {
         try {
-            byte[] bytes = Files.readAllBytes(Paths.get(C9E5.class.getResource("/alice.txt").toURI()));
+            byte[] bytes = Files.readAllBytes(Paths.get(C9E5.class.getResource("/txt/alice.txt").toURI()));
             byte[] reversedBytes = new byte[bytes.length];
             for (int i = 0, j = bytes.length - 1; i < bytes.length; i++, j--) {
                 reversedBytes[i] = bytes[j];
             }
-            Files.write(Paths.get(System.getProperty("java.io.tmpdir"), "alice.txt"), reversedBytes);
+            Files.write(Paths.get(System.getProperty("java.io.tmpdir"), "txt/alice.txt"), reversedBytes);
         } catch (Exception e) {
             e.printStackTrace();
         }

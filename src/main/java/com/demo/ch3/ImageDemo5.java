@@ -42,7 +42,7 @@ public class ImageDemo5 extends Application {
     }
 
     public void start(Stage stage) {
-        Image image = new Image("eiffel-tower.jpg");
+        Image image = new Image("images/eiffel-tower.jpg");
         int width = (int) image.getWidth();
         int height = (int) image.getHeight();
         Color[][] pixels = new Color[height][width];

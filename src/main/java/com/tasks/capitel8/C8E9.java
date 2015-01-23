@@ -37,7 +37,7 @@ public class C8E9 implements Exercise {
     }
 
     public Scanner newScanner() throws URISyntaxException, IOException {
-        Scanner scanner = new Scanner(Paths.get(this.getClass().getResource("/alice.txt").toURI()));
+        Scanner scanner = new Scanner(Paths.get(this.getClass().getResource("/txt/alice.txt").toURI()));
         scanner.useDelimiter("[\\s.,]+");
         return scanner;
     }

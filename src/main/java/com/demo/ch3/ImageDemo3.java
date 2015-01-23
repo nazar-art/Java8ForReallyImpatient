@@ -31,7 +31,7 @@ public class ImageDemo3 extends Application {
     }
 
     public void start(Stage stage) {
-        Image image = new Image("eiffel-tower.jpg");
+        Image image = new Image("images/eiffel-tower.jpg");
         // Image image2 = transform(image, Color::brighter);
         // Image image3 = transform(image2, Color::grayscale);
         Image image3 = transform(image, compose(Color::brighter, Color::grayscale));

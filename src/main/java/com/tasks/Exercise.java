@@ -9,8 +9,8 @@ import java.util.List;
 public interface Exercise {
 
     public String WORDS_SPLITTER = "[\\P{L}]+";
-    public String ALICE_FILE = "/alice.txt";
-    public String WAR_AND_PEACE_FILE = "/war-and-peace.txt";
+    public String ALICE_FILE = "/txt/alice.txt";
+    public String WAR_AND_PEACE_FILE = "/txt/war-and-peace.txt";
 
     void perform();
 
