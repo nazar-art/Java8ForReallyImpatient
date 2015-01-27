@@ -12,7 +12,10 @@ import java.util.function.Predicate;
 import static org.junit.Assert.*;
 
 /**
- * Date: 23.11.14
+ * Implement a method next that takes a Predicate<LocalDate> and returns an
+ * adjuster yielding the next date fulfilling the predicate. For example,
+ * today.with(next(w -> getDayOfWeek().getValue() < 6))
+ * computes the next workday.
  */
 public class C5E3 implements Exercise {
 

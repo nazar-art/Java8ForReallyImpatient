@@ -8,14 +8,22 @@ import java.time.LocalDate;
 import java.time.temporal.TemporalAdjusters;
 
 /**
- * Date: 23.11.14
+ * Write an equivalent of the Unix cal program that displays a calendar for a
+ * month. For example, java Cal 3 2013 should display
+ *         1 2  3
+ * 4 5 6 7 8 9 10
+ * 11 12 13 14 15 16 17
+ * 18 19 20 21 22 23 24
+ * 25 26 27 28 29 30 31
+ * indicating that March 1 is a Friday. (Show the weekend at the end of
+ * the week.)
  */
 public class C5E4 implements Exercise {
 
     @Test
     @Override
     public void perform() {
-        print(11, 2014);
+        print(2, 2015);
     }
 
     public void print(int month, int year) {

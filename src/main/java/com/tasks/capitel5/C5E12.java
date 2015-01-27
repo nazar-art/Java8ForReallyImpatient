@@ -9,7 +9,10 @@ import static org.junit.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 /**
- * Date: 30.11.14
+ * Write a program that solves the problem described at the beginning of
+ * Section 5.5, “Zoned Time,” on page 109. Read a set of appointments in different
+ * time zones and alert the user which ones are due within the next hour in
+ * local time.
  */
 public class C5E12 implements Exercise {
 

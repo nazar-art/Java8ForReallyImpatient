@@ -8,7 +8,9 @@ import java.time.*;
 import static org.junit.Assert.*;
 
 /**
- * Date: 30.11.14
+ * Your return flight leaves Frankfurt at 14:05 and arrives in Los Angeles at
+ * 16:40. How long is the flight? Write a program that can handle calculations
+ * like this.
  */
 public class C5E11 implements Exercise {
 
@@ -30,7 +32,7 @@ public class C5E11 implements Exercise {
                                 LocalTime arrival,
                                 ZoneId arrivalZone) {
         LocalDate now = LocalDate.now();
-        Instant departuteInstant = ZonedDateTime.of(
+        Instant departureInstant = ZonedDateTime.of(
                 now,
                 departure,
                 departureZone
@@ -40,6 +42,6 @@ public class C5E11 implements Exercise {
                 arrival,
                 arrivalZone
         ).toInstant();
-        return Duration.between(departuteInstant, arrivalInstant);
+        return Duration.between(departureInstant, arrivalInstant);
     }
 }

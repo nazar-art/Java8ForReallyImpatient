@@ -7,10 +7,10 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.time.Period;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
- * Date: 23.11.14
+ * Compute Programmer’s Day without using plusDays.
  */
 public class C5E1 implements Exercise {
 

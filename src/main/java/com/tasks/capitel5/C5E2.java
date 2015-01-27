@@ -6,7 +6,8 @@ import org.junit.Test;
 import java.time.LocalDate;
 
 /**
- * Date: 23.11.14
+ * What happens when you add one year to LocalDate.of(2000, 2, 29)? Four years?
+ * Four times one year?
  */
 public class C5E2 implements Exercise {
 

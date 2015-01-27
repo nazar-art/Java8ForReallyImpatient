@@ -7,7 +7,8 @@ import java.time.Instant;
 import java.time.ZoneId;
 
 /**
- * Date: 27.11.14
+ * Again using stream operations, find all time zones whose offsets aren’t full
+ * hours.
  */
 public class C5E9 implements Exercise {
 

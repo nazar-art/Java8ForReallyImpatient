@@ -8,7 +8,9 @@ import java.time.*;
 import static org.junit.Assert.*;
 
 /**
- * Date: 28.11.14
+ * Your flight from Los Angeles to Frankfurt leaves at 3:05 pm local time and
+ * takes 10 hours and 50 minutes. When does it arrive? Write a program that
+ * can handle calculations like this.
  */
 public class C5E10 implements Exercise {
 

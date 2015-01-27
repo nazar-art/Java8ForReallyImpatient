@@ -7,7 +7,9 @@ import java.time.Instant;
 import java.time.ZoneId;
 
 /**
- * Date: 27.11.14
+ * Obtain the offsets of today’s date in all supported time zones for the current
+ * time instant, turning ZoneId.getAvailableIds into a stream and using stream
+ * operations.
  */
 public class C5E8 implements Exercise {
 

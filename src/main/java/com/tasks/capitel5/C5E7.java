@@ -10,7 +10,9 @@ import static org.junit.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 /**
- * Date: 24.11.14
+ * Implement a TimeInterval class that represents an interval of time, suitable for
+ * calendar events (such as a meeting on a given date from 10:00 to 11:00).
+ * Provide a method to check whether two intervals overlap.
  */
 public class C5E7 implements Exercise {
 
@@ -41,7 +43,9 @@ public class C5E7 implements Exercise {
         TimeInterval second = new TimeInterval(
                 LocalTime.of(11, 30),
                 LocalTime.of(14, 0));
+
         assertTrue(first.overlap(second));
+
         first = new TimeInterval(
                 LocalTime.of(9, 0),
                 LocalTime.of(11, 0));
