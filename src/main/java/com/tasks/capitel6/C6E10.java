@@ -16,7 +16,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Date: 03.12.2014
+ * Write a program that asks the user for a URL, then reads the web page at that
+ * URL, and then displays all the links. Use a CompletableFuture for each stage.
+ * Don’t call get. To prevent your program from terminating prematurely, call
+ * ForkJoinPool.commonPool().awaitQuiescence(10, TimeUnit.SECONDS);
  */
 public class C6E10 implements Exercise {
 

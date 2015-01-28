@@ -8,7 +8,14 @@ import java.util.Arrays;
 import static org.junit.Assert.*;
 
 /**
- * Date: 03.12.2014
+ * You can use the parallelPrefix method to parallelize the computation of Fibonacci
+ * numbers. We use the fact that the nth Fibonacci number is the top
+ * left coefficient of Fn, where F = ( 1
+ * 1
+ * 1
+ * 0 ) . Make an array filled with 2 × 2 matrices.
+ * Define a Matrix class with a multiplication method, use parallelSetAll to
+ * make an array of matrices, and use parallelPrefix to multiply them.
  */
 public class C6E9 implements Exercise {
 
@@ -36,6 +43,7 @@ public class C6E9 implements Exercise {
         final int[][] f = {{1, 1}, {1, 0}};
         Arrays.parallelSetAll(array, i -> new Matrix(f));
         Arrays.parallelPrefix(array, (m1, m2) -> m1.multiply(m2));
+
         assertEquals(1, array[0].m[0][0]);
         assertEquals(2, array[1].m[0][0]);
         assertEquals(3, array[2].m[0][0]);

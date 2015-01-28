@@ -11,7 +11,14 @@ import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 /**
- * Date: 03.12.2014
+ * Write a method
+ * public static <T> CompletableFuture<T> repeat(
+ * Supplier<T> action, Predicate<T> until)
+ * that asynchronously repeats the action until it produces a value that is
+ * accepted by the until function, which should also run asynchronously. Test
+ * with a function that reads a java.net.PasswordAuthentication from the console,
+ * and a function that simulates a validity check by sleeping for a second and
+ * then checking that the password is "secret". Hint: Use recursion.
  */
 public class C6E11 {
 

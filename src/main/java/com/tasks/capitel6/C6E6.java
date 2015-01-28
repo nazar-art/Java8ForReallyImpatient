@@ -16,7 +16,8 @@ import static org.junit.Assert.*;
 import static org.junit.Assert.assertNotNull;
 
 /**
- * Date: 02.12.14
+ * Repeat the preceding exercise, but use computeIfAbsent instead. What is the
+ * advantage of this approach?
  */
 public class C6E6 implements Exercise {
 
@@ -28,6 +29,7 @@ public class C6E6 implements Exercise {
                 new File(this.getClass().getResource("/txt/alice.txt").getFile()),
                 new File(this.getClass().getResource("/fxml/person.fxml").getFile()),
         };
+
         Arrays.asList(files).parallelStream().forEach(f -> {
             try {
                 Arrays.asList(new String(Files.readAllBytes(f.toPath()), StandardCharsets.UTF_8)
@@ -37,6 +39,7 @@ public class C6E6 implements Exercise {
                 e.printStackTrace();
             }
         });
+
         assertNotNull(map.get("name"));
         assertEquals(2, map.get("name").size());
     }

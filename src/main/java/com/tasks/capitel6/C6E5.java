@@ -16,7 +16,9 @@ import static org.junit.Assert.*;
 import static org.junit.Assert.assertNotNull;
 
 /**
- * Date: 02.12.14
+ * Write an application in which multiple threads read all words from a collection
+ * of files. Use a ConcurrentHashMap<String, Set<File>> to track in which files
+ * each word occurs. Use the merge method to update the map.
  */
 public class C6E5 implements Exercise {
 
@@ -28,6 +30,7 @@ public class C6E5 implements Exercise {
                 new File(this.getClass().getResource("/txt/alice.txt").getFile()),
                 new File(this.getClass().getResource("/fxml/person.fxml").getFile()),
         };
+
         Arrays.asList(files).parallelStream().forEach(f -> {
             try {
                 Arrays.asList(new String(Files.readAllBytes(f.toPath()), StandardCharsets.UTF_8)
@@ -37,6 +40,7 @@ public class C6E5 implements Exercise {
                 e.printStackTrace();
             }
         });
+
         assertNotNull(map.get("name"));
         assertEquals(2, map.get("name").size());
     }

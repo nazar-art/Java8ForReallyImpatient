@@ -8,7 +8,8 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.atomic.LongAccumulator;
 
 /**
- * Date: 30.11.14
+ * Write a program that keeps track of the longest string that is observed by a
+ * number of threads. Use an AtomicReference and an appropriate accumulator.
  */
 public class C6E1 implements Exercise {
 
@@ -17,6 +18,7 @@ public class C6E1 implements Exercise {
     public void perform() {
         AtomicReference<String> longest = new AtomicReference<>();
         LongAccumulator accumulator = new LongAccumulator(Math::max, 0);
+
         List<String> words = getWordsAsList();
         words.parallelStream().forEach(
                 next -> longest.updateAndGet(
