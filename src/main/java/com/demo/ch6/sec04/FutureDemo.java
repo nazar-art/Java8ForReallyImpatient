@@ -50,7 +50,6 @@ class Util {
 
 }
 
-
 public class FutureDemo {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         String hrefPattern = "<a\\s+href\\s*=\\s*(\"[^\"]*\"|[^\\s>]*)\\s*>";
