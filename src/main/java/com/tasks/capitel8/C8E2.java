@@ -4,7 +4,8 @@ import com.tasks.Exercise;
 import org.junit.Test;
 
 /**
- * Date: 06.12.14
+ * For which integer n does Math.negateExact(n) throw an exception? (Hint: There
+ * is only one.)
  */
 public class C8E2 implements Exercise {
 

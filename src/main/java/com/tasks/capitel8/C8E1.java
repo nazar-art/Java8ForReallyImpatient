@@ -6,7 +6,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Date: 06.12.14
+ * Write a program that adds, subtracts, divides, and compares numbers between
+ * 0 and 232 – 1, using int values and unsigned operations. Show why
+ * divideUnsigned and remainderUnsigned are necessary
  */
 public class C8E1 implements Exercise {
 

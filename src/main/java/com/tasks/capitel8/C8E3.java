@@ -8,7 +8,13 @@ import static java.lang.StrictMath.abs;
 import static org.junit.Assert.*;
 
 /**
- * Date: 06.12.14
+ * Euclid’s algorithm (which is over two thousand years old) computes the
+ * greatest common divisor of two numbers as gcd(a, b) = a if b is zero, and
+ * gcd(b, rem(a, b)) otherwise, where rem is the remainder. Clearly, the gcd
+ * should not be negative, even if a or b are (since its negation would then be a
+ * greater divisor). Implement the algorithm with %, floorMod, and a rem function
+ * that produces the mathematical (non-negative) remainder. Which of the three
+ * gives you the least hassle with negative values?
  */
 public class C8E3 implements Exercise {
 

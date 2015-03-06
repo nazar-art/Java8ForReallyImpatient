@@ -11,6 +11,7 @@ public class CollectionMethods {
         ids.replaceAll(s -> s.replace("America/", ""));
         System.out.println("---");
         ids.forEach(System.out::println);
+
         BitSet bits = new BitSet();
         ids.forEach(s -> bits.set(s.length()));
         System.out.println(Arrays.toString(bits.stream().toArray()));

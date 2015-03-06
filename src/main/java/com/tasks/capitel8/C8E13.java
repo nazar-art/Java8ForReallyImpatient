@@ -13,7 +13,10 @@ import java.io.PrintWriter;
 import java.util.*;
 
 /**
- * Date: 13.12.14
+ * Repeat the preceding exercise, but build a source-level annotation processor
+ * emitting a program that, when executed, runs the tests in its main method.
+ * (See Horstmann and Cornell, Core Java, 9th Edition, Volume 2, Section 10.6 for
+ * an introduction into processing source-level annotations.)
  */
 @SupportedAnnotationTypes({"de.galperin.javase8.capitel8.TestCase", "de.galperin.javase8.capitel8.TestCases"})
 @SupportedSourceVersion(SourceVersion.RELEASE_8)

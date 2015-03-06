@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 import static org.junit.Assert.assertNull;
 
 /**
- * Date: 08.12.14
+ * Express nullsFirst(naturalOrder()).reversed() without calling reversed.
  */
 public class C8E7 implements Exercise {
 

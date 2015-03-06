@@ -1,13 +1,13 @@
 package com.demo.ch8.sec06;
 
-import java.beans.*;
-import java.io.*;
-import java.util.*;
-import javax.annotation.processing.*;
-import javax.lang.model.*;
-import javax.lang.model.element.*;
-import javax.tools.*;
-import javax.tools.Diagnostic.*;
+import javax.annotation.processing.AbstractProcessor;
+import javax.annotation.processing.RoundEnvironment;
+import javax.annotation.processing.SupportedAnnotationTypes;
+import javax.annotation.processing.SupportedSourceVersion;
+import javax.lang.model.SourceVersion;
+import javax.lang.model.element.Element;
+import javax.lang.model.element.TypeElement;
+import java.util.Set;
 
 @SupportedAnnotationTypes({"TestCase", "TestCases"})
 @SupportedSourceVersion(SourceVersion.RELEASE_8)

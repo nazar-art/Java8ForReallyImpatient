@@ -9,7 +9,11 @@ import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
 /**
- * Date: 11.12.14
+ * Write a program that gets the contents of a password-protected web page.
+ * Call URLConnection connection = url.openConnection();. Form the string username:
+ * password and encode it in Base64. Then call connection.setRequestProperty(
+ * "Authorization", "Basic " + encoded string), followed by connection.connect() and
+ * connection.getInputStream().
  */
 public class C8E11 {
 

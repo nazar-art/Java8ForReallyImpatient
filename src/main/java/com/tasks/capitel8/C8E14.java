@@ -7,7 +7,8 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 /**
- * Date: 13.12.14
+ * Demonstrate the use of the Objects.requireNonNull method and show how it
+ * leads to more useful error messages.
  */
 public class C8E14 implements Exercise {
 

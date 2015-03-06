@@ -1,9 +1,9 @@
 package com.demo.ch8.sec04;
 
 import java.util.*;
-import java.util.stream.*;
 
-import static java.util.Comparator.*;
+import static java.util.Comparator.naturalOrder;
+import static java.util.Comparator.nullsFirst;
 
 class Person {
     private String name;
@@ -85,22 +85,28 @@ public class Comparators {
 
     public static void main(String[] args) {
         Arrays.sort(presidents, Comparator.comparing(Person::getName));
+
         System.out.println(Arrays.toString(presidents));
+        System.out.println();
 
         Arrays.sort(presidents,
                 Comparator.comparing(Person::getLastName)
                         .thenComparing(Person::getFirstName));
         System.out.println(Arrays.toString(presidents));
+        System.out.println();
 
         Arrays.sort(presidents, Comparator.comparing(Person::getName,
                 (s, t) -> Integer.compare(s.length(), t.length())));
         System.out.println(Arrays.toString(presidents));
+        System.out.println();
 
         Arrays.sort(presidents, Comparator.comparingInt(p -> p.getName().length()));
         System.out.println(Arrays.toString(presidents));
+        System.out.println();
 
         Arrays.sort(presidents, Comparator.comparing(Person::getMiddleName, nullsFirst(naturalOrder())));
         System.out.println(Arrays.toString(presidents));
+        System.out.println();
 
         Arrays.sort(presidents, Comparator.comparing(Person::getMiddleName, nullsFirst(Comparator.<String>naturalOrder().reversed())));
         System.out.println(Arrays.toString(presidents));

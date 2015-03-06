@@ -8,6 +8,11 @@ import java.lang.reflect.Method;
 import static junit.framework.TestCase.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+/**
+ * Implement the TestCase annotation and a program that loads a class with such
+ * annotations and invokes the annotated methods, checking whether they yield
+ * the expected values. Assume that parameters and return values are integers.
+ */
 public class C8E12 implements Exercise {
 
     @Test

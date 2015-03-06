@@ -9,7 +9,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * Date: 08.12.14
+ * Write a program that demonstrates the benefits of the CheckedQueue class.
  */
 public class C8E8 implements Exercise {
 

@@ -11,7 +11,10 @@ import static org.junit.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 /**
- * Date: 08.12.14
+ * Using only methods of the Comparator class, define a comparator for Point2D
+ * which is a total ordering (that is, the comparator only returns zero for equal
+ * objects). Hint: First compare the x-coordinates, then the y-coordinates. Do
+ * the same for Rectangle2D.
  */
 public class C8E6 implements Exercise {
 

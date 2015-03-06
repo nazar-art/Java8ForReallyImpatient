@@ -11,7 +11,8 @@ import static org.junit.Assert.*;
 import static org.testng.Assert.assertTrue;
 
 /**
- * Date: 13.12.14
+ * Use a regular expression with named capturing groups to parse a line
+ * containing a city, state, and zip code. Accept both 5- and 9-digit zip codes.
  */
 public class C8E16 implements Exercise {
 

@@ -10,7 +10,25 @@ import java.util.stream.Stream;
 import static org.junit.Assert.*;
 
 /**
- * Date: 07.12.14
+ * The Math.nextDown(x) method returns the next smaller floating-point number
+ * than x, just in case some random process hit x exactly, and we promised a
+ * number < x. Can this really happen? Consider double r = 1 - generator.
+ * nextDouble(), where generator is an instance of java.util.Random. Can it ever yield
+ * 1? That is, can generator.nextDouble() ever yield 0? The documentation says it
+ * can yield any value between 0 inclusive and 1 exclusive. But, given that there
+ * are 253 such floating-point numbers, will you ever get a zero? Indeed, you
+ * do. The random number generator computes the next seed as next(s) = s · m
+ * + a % N, where m = 25214903917, a = 11, and N = 248. The inverse of m modulo
+ * N is v = 246154705703781, and therefore you can compute the predecessor of
+ * a seed as prev(s) = (s – a) · v % N. To make a double, two random numbers are
+ * generated, and the top 26 and 27 bits are taken each time. When s is 0, next(s)
+ * is 11, so that’s what we want to hit: two consecutive numbers whose top bits
+ * are zero. Now, working backwards, let’s start with s = prev(prev(prev(0))).
+ * Since the Random constructor sets s = (initialSeed ^ m) % N, offer it s =
+ * prev(prev(prev(0))) ^ m = 164311266871034, and you’ll get a zero after two
+ * calls to nextDouble. But that is still too obvious. Generate a million predecessors,
+ * using a stream of course, and pick the minimum seed. Hint: You will get a
+ * zero after 376050 calls to nextDouble.
  */
 public class C8E4 implements Exercise {
 

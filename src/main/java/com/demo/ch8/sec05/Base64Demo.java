@@ -9,14 +9,16 @@ public class Base64Demo {
     public static void main(String[] args) throws IOException {
         String username = "fred";
         String password = "secret";
+
         Base64.Encoder encoder = Base64.getEncoder();
         String original = username + ":" + password;
-        String encoded = encoder.encodeToString(original.getBytes(StandardCharsets.UTF_8));
-        System.out.println(encoded);
-        String decoded = new String(Base64.getDecoder().decode(encoded.getBytes()));
-        System.out.println(decoded);
 
-        Path originalPath = Paths.get("Base64Demo.java"),
+        String encoded = encoder.encodeToString(original.getBytes(StandardCharsets.UTF_8));
+        System.out.println("encoded: " + encoded);
+        String decoded = new String(Base64.getDecoder().decode(encoded.getBytes()));
+        System.out.println("decoded: " + decoded);
+
+        Path originalPath = Paths.get("src/main/java/com/demo/ch8/sec05/Base64Demo.java"),
                 encodedPath = Paths.get("Base64Demo.java.base64");
         encoder = Base64.getMimeEncoder();
         try (OutputStream output = Files.newOutputStream(encodedPath)) {

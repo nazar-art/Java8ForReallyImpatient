@@ -2,14 +2,16 @@ package com.demo.ch8.sec05;
 
 import java.io.*;
 import java.net.*;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
 import java.util.*;
 import java.util.stream.*;
 
 public class StreamsOfLines {
     public static void main(String[] args) throws IOException {
-        Path path = Paths.get("StreamsOfLines.java");
-        try (Stream<String> lines = Files.lines(path)) {
+        Path path = Paths.get("src/main/java/com/demo/ch8/sec05/StreamsOfLines.java");
+
+        try (Stream<String> lines = Files.lines(path, StandardCharsets.UTF_8).onClose(() -> System.out.println("Closing"))) {
             Optional<String> passwordEntry = lines.filter(s -> s.contains("password")).findFirst();
             passwordEntry.ifPresent(System.out::println);
         }
@@ -34,7 +36,7 @@ public class StreamsOfLines {
             }
 
             public int read(char[] cbuf, int off, int len) throws IOException {
-                if (++count == 10) throw new IOException("Simulated exception");
+                if (++count == 1_000) throw new IOException("Simulated exception");
                 return len;
             }
         })) {

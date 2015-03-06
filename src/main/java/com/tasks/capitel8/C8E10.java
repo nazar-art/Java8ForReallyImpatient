@@ -9,7 +9,8 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 /**
- * Date: 09.12.14
+ * Unzip the src.zip file from the JDK. Using Files.walk, find all Java files that
+ * contain the keywords transient and volatile.
  */
 public class C8E10 {
 

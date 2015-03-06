@@ -15,7 +15,8 @@ import java.util.stream.StreamSupport;
 import static org.testng.Assert.assertTrue;
 
 /**
- * Date: 08.12.14
+ * Write methods that turn a Scanner into a stream of words, lines, integers, or
+ * double values. Hint: Look at the source code for BufferedReader.lines.
  */
 public class C8E9 implements Exercise {
 

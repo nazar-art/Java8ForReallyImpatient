@@ -27,7 +27,7 @@ public class MathematicalFunctions {
 
         Random generator = new Random(164311266871034L);
         // Also try new Random(881498)
-        for (int tries = 1; tries < 1000000000; tries++) {
+        for (int tries = 1; tries < 1_000_000_000; tries++) {
             double r = 1.0 - generator.nextDouble();
             if (r == 1.0) {
                 System.out.println("It happened at try " + tries);

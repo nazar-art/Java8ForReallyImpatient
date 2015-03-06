@@ -10,7 +10,8 @@ import java.nio.file.Paths;
 import java.util.regex.Pattern;
 
 /**
- * Date: 13.12.14
+ * Using Files.lines and Pattern.asPredicate, write a program that acts like the grep
+ * utility, printing all lines that contain a match for a regular expression.
  */
 public class C8E15 implements Exercise {
 
