@@ -15,7 +15,7 @@ public class Misc {
         int n = Integer.parseInt("+1");
         System.out.printf("%f %d\n", x, n);
 
-        Logger.getGlobal().info("x=" + x);
+        Logger.getGlobal().info("x = " + x);
 
         try {
             new Misc().process(null);
@@ -26,9 +26,11 @@ public class Misc {
         byte[] bytes = { (byte) 0b10101100, (byte) 0b00101000 };
         BitSet primes = BitSet.valueOf(bytes);
         System.out.println(primes);
-        long[] longs = { 0x100010116L, 0x1L, 0x1L, 0L, 0x1L };
+
+        long[] longs = { 0x100010116L, 0x1L, 0x1L, /*0L,*/ 0x1L };
         BitSet powersOfTwo = BitSet.valueOf(longs);
         System.out.println(powersOfTwo);
+
         for (byte b : powersOfTwo.toByteArray())
             System.out.print(Integer.toBinaryString(Byte.toUnsignedInt(b)));
         System.out.println();
@@ -36,7 +38,6 @@ public class Misc {
     }
 
     public void process(String directions) {
-        this.directions = Objects.requireNonNull(directions,
-                "directions must not be null");
+        this.directions = Objects.requireNonNull(directions, "directions must not be null");
     }
 }

@@ -6,7 +6,8 @@ import org.junit.Test;
 import static org.testng.Assert.assertTrue;
 
 /**
- * Date: 14.12.14
+ * Implement the compareTo method of the Point class in Section 9.3.3, “Comparing
+ * Numeric Types,” on page 189, without using Integer.compareTo.
  */
 public class C9E8 implements Exercise {
 

@@ -8,7 +8,7 @@ import java.util.Base64;
 /**
  * @author Nazar_Lelyak.
  */
-public class EncodingDemo {
+public class HashingDemo {
     public static final char[] HEX_CHARS = "0123456789ABCDEF".toCharArray();
     public static final String TEST_TEXT = "This is a hash test";
 

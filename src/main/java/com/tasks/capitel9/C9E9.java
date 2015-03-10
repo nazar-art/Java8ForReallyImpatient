@@ -41,9 +41,10 @@ public class C9E9 implements Exercise {
         @Override
         public boolean equals(Object other) {
             if (this == other) return true;
-            if (other == null) return false;
-            if (getClass() != other.getClass()) return false;
+            if (null == other) return false;
+            if (this.getClass() != other.getClass()) return false;
             LabeledPoint otherPoint = (LabeledPoint) other;
+
             return Objects.equals(label, otherPoint.label)
                     && Objects.equals(x, otherPoint.x)
                     && Objects.equals(y, otherPoint.y);

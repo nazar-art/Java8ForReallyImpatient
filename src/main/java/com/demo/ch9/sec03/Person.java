@@ -6,8 +6,8 @@ import java.util.Objects;
  * @author Nazar_Lelyak.
  */
 public class Person {
-    private String first;
-    private String last;
+    private String firstName;
+    private String lastName;
 
     public boolean equals(Object otherObject) {
         if (this == otherObject) return true;
@@ -15,10 +15,10 @@ public class Person {
         if (getClass() != otherObject.getClass()) return false;
         Person other = (Person) otherObject;
 
-        return Objects.equals(first, other.first) && Objects.equals(last, other.last);
+        return Objects.equals(firstName, other.firstName) && Objects.equals(lastName, other.lastName);
     }
 
     public int hashCode() {
-        return Objects.hash(first, last);
+        return Objects.hash(firstName, lastName);
     }
 }

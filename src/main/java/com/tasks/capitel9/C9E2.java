@@ -11,7 +11,9 @@ import static org.junit.Assert.*;
 import static org.junit.Assert.fail;
 
 /**
- * Date: 14.12.14
+ * Improve on the preceding exercise by adding any exceptions thrown by
+ * in.close() or out.close() as suppressed exceptions to the original exception, if
+ * there was one.
  */
 public class C9E2 implements Exercise {
 
@@ -142,7 +144,7 @@ public class C9E2 implements Exercise {
         PrintWriter out = null;
         Exception cachedException = null;
         try {
-            in = new Scanner(Paths.get(C9E2.class.getResource("/txt/alice.txt").toURI()));
+            in = new Scanner(Paths.get(C9E2.class.getResource(ALICE_FILE).toURI()));
             try {
                 out = new PrintWriter("/fake/alice.txt");
                 while (in.hasNext()) out.println(in.next().toLowerCase());
