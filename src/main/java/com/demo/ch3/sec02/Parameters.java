@@ -1,4 +1,4 @@
-package com.demo.ch3;
+package com.demo.ch3.sec02;
 
 import java.util.function.*;
 

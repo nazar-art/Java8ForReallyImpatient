@@ -1,4 +1,4 @@
-package com.demo.ch4;
+package com.demo.ch4.sec05;
 
 import javafx.application.Application;
 import javafx.beans.binding.Bindings;

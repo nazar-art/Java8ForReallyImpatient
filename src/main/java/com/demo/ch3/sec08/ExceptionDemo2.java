@@ -1,4 +1,4 @@
-package com.demo.ch3;
+package com.demo.ch3.sec08;
 
 import java.util.function.*;
 import java.util.concurrent.*;

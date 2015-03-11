@@ -1,6 +1,6 @@
 package com.demo.ch2.sec01;
 
-import com.demo.FileLocators;
+import com.demo.FileLocator;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -15,7 +15,7 @@ import java.util.List;
 public class Test {
 
     public static void main(String[] args) throws IOException {
-        String contents = new String(Files.readAllBytes(Paths.get(FileLocators.ALICE_TXT)), StandardCharsets.UTF_8);
+        String contents = new String(Files.readAllBytes(Paths.get(FileLocator.ALICE_TXT)), StandardCharsets.UTF_8);
         List<String> words = Arrays.asList(contents.split("[\\P{L}]+"));
 
         long count = 0;

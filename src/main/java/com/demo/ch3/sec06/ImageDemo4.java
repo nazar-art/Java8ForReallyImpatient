@@ -1,4 +1,4 @@
-package com.demo.ch3;
+package com.demo.ch3.sec06;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
