@@ -1,8 +1,9 @@
 package com.demo.ch3.sec02;
 
-import java.util.function.*;
+import java.util.function.IntConsumer;
 
 public class Parameters {
+
     public static void main(String[] args) {
         repeat(10, i -> System.out.println("Countdown: " + (9 - i)));
         repeat(10, () -> System.out.println("Hello, World!"));
@@ -16,4 +17,3 @@ public class Parameters {
         for (int i = 0; i < n; i++) action.run();
     }
 }
-

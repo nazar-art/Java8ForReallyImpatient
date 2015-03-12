@@ -32,9 +32,9 @@ public class Test {
     }
 
     public static void main(String[] args) throws IOException {
-        String contents = new String(Files.readAllBytes(
-                Paths.get(FileLocator.ALICE_TXT)), StandardCharsets.UTF_8);
+        String contents = new String(Files.readAllBytes(Paths.get(FileLocator.ALICE_TXT)), StandardCharsets.UTF_8);
         List<String> wordList = Arrays.asList(contents.split("[\\P{L}]+"));
+
         Stream<String> words = wordList.stream();
         Stream<String> longWords = words.filter(w -> w.length() > 12);
         show("longWords", longWords);
@@ -52,4 +52,3 @@ public class Test {
         show("letters", letters);
     }
 }
-

@@ -37,12 +37,13 @@ public class Test {
 
         Stream<String> words = Stream.of(contents.split("[\\P{L}]+"));
         show("words", words);
+
         Stream<String> song = Stream.of("gently", "down", "the", "stream");
         show("song", song);
+
         Stream<String> silence = Stream.empty();
         silence = Stream.<String>empty(); // Explicit type specification
         show("silence", silence);
-
 
         Stream<String> echos = Stream.generate(() -> "Echo");
         show("echos", echos);

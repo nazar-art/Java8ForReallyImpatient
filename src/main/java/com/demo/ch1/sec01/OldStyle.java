@@ -1,5 +1,8 @@
 package com.demo.ch1.sec01;
 
+/**
+ * @author Nazar_Lelyak.
+ */
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -11,7 +14,6 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 public class OldStyle extends Application {
-
     public static void main(String[] args) {
         Worker w = new Worker();
         new Thread(w).start();
