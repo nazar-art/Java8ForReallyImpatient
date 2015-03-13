@@ -10,8 +10,7 @@ import java.util.stream.*;
 
 public class Test {
     public static void main(String[] args) throws IOException {
-        String contents = new String(Files.readAllBytes(
-                Paths.get(FileLocator.WAR_AND_PEACE_TXT)), StandardCharsets.UTF_8);
+        String contents = new String(Files.readAllBytes(Paths.get(FileLocator.WAR_AND_PEACE_TXT)), StandardCharsets.UTF_8);
         List<String> wordList = Arrays.asList(contents.split("[\\P{L}]+"));
 
         Stream<String> words = wordList.stream();
@@ -21,8 +20,7 @@ public class Test {
             System.out.println("largest: " + largest.get());
 
         words = wordList.stream();
-        boolean aWordStartsWithQ
-                = words.anyMatch(s -> s.startsWith("Q"));
+        boolean aWordStartsWithQ = words.anyMatch(s -> s.startsWith("Q"));
         System.out.println("aWordStartsWithQ: " + aWordStartsWithQ);
 
         words = wordList.stream();

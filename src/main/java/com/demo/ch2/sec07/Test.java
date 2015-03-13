@@ -11,7 +11,6 @@ import java.util.*;
 public class Test {
     public static void main(String[] args) throws IOException {
         String contents = new String(Files.readAllBytes(Paths.get(FileLocator.WAR_AND_PEACE_TXT)), StandardCharsets.UTF_8);
-
         List<String> wordList = Arrays.asList(contents.split("[\\P{L}]+"));
 
         Optional<String> optionalValue = wordList.stream().filter(s -> s.contains("red")).findFirst();
@@ -25,11 +24,12 @@ public class Test {
 
         optionalValue = wordList.stream().filter(s -> s.contains("fred")).findFirst();
 
-        System.out.print(optionalValue.orElse("No word") + " contains fred");
+        System.out.println(optionalValue.orElse("No word") + " contains fred");
 
         Optional<String> optionalString = Optional.empty();
         String result = optionalString.orElse("N/A");
         System.out.println("result: " + result);
+
         result = optionalString.orElseGet(() -> System.getProperty("user.dir"));
         System.out.println("result: " + result);
         try {

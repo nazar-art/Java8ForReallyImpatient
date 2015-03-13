@@ -13,10 +13,10 @@ import java.util.stream.Stream;
 public class Test {
 
     public static Stream<String> noVowels(String filename) throws IOException {
-        String contents = new String(Files.readAllBytes(
-                Paths.get(filename)), StandardCharsets.UTF_8);
+        String contents = new String(Files.readAllBytes(Paths.get(filename)), StandardCharsets.UTF_8);
         List<String> wordList = Arrays.asList(contents.split("[\\P{L}]+"));
-        Stream<String> words = wordList.stream();
+
+        Stream<String> words = wordList.stream().skip(0);
         return words.map(s -> s.replaceAll("[aeiouAEIOU]", ""));
     }
 
@@ -28,7 +28,6 @@ public class Test {
     }
 
     public static void main(String[] args) throws IOException {
-
         Iterator<Integer> iter = Stream.iterate(0, n -> n + 1).limit(10).iterator();
         while (iter.hasNext()) System.out.println(iter.next());
 
@@ -40,32 +39,39 @@ public class Test {
             System.out.println("number: " + number);
             Integer[] numbers2 = (Integer[]) numbers; // Throws exception
         } catch (ClassCastException ex) {
+            System.out.println("ClassCastException caught");
             ex.printStackTrace();
         }
 
-        Integer[] numbers3 = Stream.iterate(0, n -> n + 1).limit(10).toArray(Integer[]::new);
-        System.out.println(numbers3); // Note it's an Integer[] array
+        Integer[] numbers3 = Stream.iterate(0, n -> n + 1)
+                .limit(10)
+                .toArray(Integer[]::new);
+        System.out.println(Arrays.toString(numbers3)); // Note it's an Integer[] array
 
-        HashSet<String> noVowelHashSet
-                = noVowels(FileLocator.ALICE_TXT).collect(HashSet::new, HashSet::add, HashSet::addAll);
-
+        HashSet<String> noVowelHashSet = noVowels(FileLocator.ALICE_TXT)
+                .collect(HashSet::new, HashSet::add, HashSet::addAll);
         show("noVowelHashSet", noVowelHashSet);
 
-        Set<String> noVowelSet
-                = noVowels(FileLocator.ALICE_TXT).collect(Collectors.toSet());
+        Set<String> noVowelSet = noVowels(FileLocator.ALICE_TXT)
+                .collect(Collectors.toSet());
         show("noVowelSet", noVowelSet);
 
-        TreeSet<String> noVowelTreeSet
-                = noVowels(FileLocator.ALICE_TXT).collect(Collectors.toCollection(TreeSet::new));
+        TreeSet<String> noVowelTreeSet = noVowels(FileLocator.ALICE_TXT)
+                .collect(Collectors.toCollection(TreeSet::new));
         show("noVowelTreeSet", noVowelTreeSet);
 
-        String result = noVowels(FileLocator.ALICE_TXT).limit(10).collect(Collectors.joining());
-        System.out.println(result);
-        result = noVowels(FileLocator.ALICE_TXT).limit(10).collect(Collectors.joining(", "));
+        String result = noVowels(FileLocator.ALICE_TXT)
+                .limit(10)
+                .collect(Collectors.joining());
         System.out.println(result);
 
-        IntSummaryStatistics summary = noVowels(FileLocator.ALICE_TXT).collect(
-                Collectors.summarizingInt(String::length));
+        result = noVowels(FileLocator.ALICE_TXT)
+                .limit(10)
+                .collect(Collectors.joining(", "));
+        System.out.println(result);
+
+        IntSummaryStatistics summary = noVowels(FileLocator.WAR_AND_PEACE_TXT)
+                .collect(Collectors.summarizingInt(String::length));
         double averageWordLength = summary.getAverage();
         double maxWordLength = summary.getMax();
         System.out.println("Average word length: " + averageWordLength);

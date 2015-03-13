@@ -26,19 +26,19 @@ public class Test {
             if (w.length() > 12) count++;
         }
         timer.stop();
-        System.out.printf("iterative       - %d words - %d milliseconds\n", count, timer.getElapsedTime());
+        System.out.printf("iterative: %12d words - %4d milliseconds\n", count, timer.getElapsedTime());
         timer.reset();
 
         timer.start();
         count = words.stream().filter(w -> w.length() > 12).count();
         timer.stop();
-        System.out.printf("stream          - %d words - %d milliseconds\n", count, timer.getElapsedTime());
+        System.out.printf("stream: %15d words - %4d milliseconds\n", count, timer.getElapsedTime());
         timer.reset();
 
         timer.start();
         count = words.parallelStream().filter(w -> w.length() > 12).count();
         timer.stop();
-        System.out.printf("parallel stream - %d words - %d milliseconds\n", count, timer.getElapsedTime());
+        System.out.printf("parallel stream: %6d words - %4d milliseconds\n", count, timer.getElapsedTime());
         timer.reset();
     }
 }
