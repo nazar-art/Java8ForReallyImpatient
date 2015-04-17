@@ -1,4 +1,5 @@
-java for really impatient 8
-=======
+### java for really impatient 8
+-------------
 
-My solutions for the exercises from the book Java SE 8 for the Really Impatient written by Cay S. Horstmann
+This project represents usage of `Java 8` features.
+All project is executed according excellent book by Kay Horstmann `Java for really impatient`.

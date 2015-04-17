@@ -9,11 +9,9 @@ import java.util.*;
 public class OptionalType {
     public static void main(String[] args) throws IOException {
         String contents = new String(Files.readAllBytes(Paths.get(Test.ALICE_PATH)), StandardCharsets.UTF_8);
-
         List<String> wordList = Arrays.asList(contents.split("[\\P{L}]+"));
 
         Optional<String> optionalValue = wordList.stream().filter(s -> s.contains("red")).findFirst();
-
         optionalValue.ifPresent(s -> System.out.println(s + " contains red"));
 
         Set<String> results = new HashSet<>();
