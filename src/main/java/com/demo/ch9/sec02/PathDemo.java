@@ -7,7 +7,7 @@ import java.nio.file.*;
  */
 public class PathDemo {
     public static void main(String[] args) {
-        Path absolute = Paths.get("/", "home", "cay");
+        Path absolute = Paths.get("/", "home", "nazar");
         System.out.println(absolute);
         Path relative = Paths.get("myprog", "conf", "user.properties");
         System.out.println(relative);

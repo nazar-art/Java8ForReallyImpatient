@@ -1,10 +1,29 @@
 package com.demo.ch5.sec02;
 
-import java.time.*;
-import java.time.temporal.*;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 
 public class LocalDates {
     public static void main(String[] args) {
+        /*DateFormat dateFormat = new SimpleDateFormat("dd");
+        Date date = new Date();
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.DAY_OF_MONTH, 1);
+        System.out.println("date should be: " + dateFormat.format(date));*/
+        //
+
+        LocalDate lastAprilDay = LocalDate.of(2014, Month.APRIL, 30);
+        System.out.println("last april day: " + lastAprilDay);
+        LocalDate firstMay = lastAprilDay.plusDays(1);
+        System.out.println("should be first may day: " + firstMay);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd");
+        String formatDate = formatter.format(firstMay);
+        System.out.println("formatted date: " + formatDate);
+
+        //
         LocalDate today = LocalDate.now(); // Today’s date
         System.out.println("today: " + today);
 
