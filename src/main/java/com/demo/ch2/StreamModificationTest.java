@@ -1,7 +1,6 @@
 package com.demo.ch2;
 
 import com.tasks.Exercise;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.List;
 import java.util.Optional;
@@ -36,6 +35,6 @@ public class StreamModificationTest implements Exercise {
 
     @Override
     public void perform() {
-        throw new NotImplementedException();
+//        throw new NotImplementedException();
     }
 }
