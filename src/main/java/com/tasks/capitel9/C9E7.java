@@ -6,7 +6,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 /**
- * Date: 14.12.14
+ * Write a program that reads the contents of a web page and saves it to a file.
+ * Use URL.openStream and Files.copy.
  */
 public class C9E7 {
 

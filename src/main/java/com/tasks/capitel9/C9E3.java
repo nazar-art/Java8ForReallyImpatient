@@ -4,7 +4,17 @@ import java.io.FileNotFoundException;
 import java.net.UnknownHostException;
 
 /**
- * Date: 14.12.14
+ * When you rethrow an exception that you caught in a multi-catch clause, how
+ * do you declare its type in the throws declaration of the ambient method? For
+ * example, consider
+ * public void process() throws ... {
+ * try {
+ * ...
+ * catch (FileNotFoundException | UnknownHostException ex) {
+ * logger.log(Level.SEVERE, "...", ex);
+ * throw ex;
+ * }
+ * }
  */
 public class C9E3 {
 

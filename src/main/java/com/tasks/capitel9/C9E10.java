@@ -8,7 +8,8 @@ import java.util.Objects;
 import static org.testng.Assert.assertTrue;
 
 /**
- * Date: 14.12.14
+ * Implement a compareTo method for the LabeledPoint class of the preceding
+ * exercise.
  */
 public class C9E10 implements Exercise {
 
@@ -41,6 +42,7 @@ public class C9E10 implements Exercise {
             if (diff != 0) return diff;
             diff = Integer.compare(y, other.y);
             if (diff != 0) return diff;
+
             return Objects.compare(label, other.label, (a, b) -> {
                 if (a == null) return -1;
                 if (b == null) return 1;

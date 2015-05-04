@@ -53,4 +53,17 @@ public interface Exercise {
         }
     }
 
+    /*class Inner implements Exercise {
+        @Override
+        public void perform() {
+
+        }
+
+        public static void main(String[] args) {
+            Inner inner = new Inner();
+            List<String> list = inner.getWordsAsList();
+            Stream<String> stream = list.stream();
+            stream.forEach(System.out::println);
+        }
+    }*/
 }
