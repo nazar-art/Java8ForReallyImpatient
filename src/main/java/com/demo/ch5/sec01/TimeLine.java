@@ -16,6 +16,9 @@ public class TimeLine {
         long millis = timeElapsed.toMillis();
         System.out.printf("%d milliseconds\n", millis);
 
+        long days = timeElapsed.toDays();
+        System.out.printf("%d days\n", days);
+
         Instant start2 = Instant.now();
         runAlgorithm2();
         Instant end2 = Instant.now();

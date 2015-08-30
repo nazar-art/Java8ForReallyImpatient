@@ -41,6 +41,10 @@ public class LocalDates {
 
         System.out.println("Until christmas: " + independenceDay.until(christmas));
         System.out.println("Until christmas (with crono): " + independenceDay.until(christmas, ChronoUnit.DAYS));
+//        System.out.println("Difference with Duration: " + Duration.between(independenceDay.atTime(0, 0),
+
+        System.out.println("Difference with ChronUnits: " +
+        ChronoUnit.DAYS.between(independenceDay, christmas));
 
         System.out.println(LocalDate.of(2016, 1, 31).plusMonths(1));
         System.out.println(LocalDate.of(2016, 3, 31).minusMonths(1));
