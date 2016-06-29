@@ -7,11 +7,16 @@ public class DateAdjusters {
     public static void main(String[] args) {
         int year = 2014;
         int month = 6;
-        LocalDate firstTuesday = LocalDate.of(year, month, 1)
-                .with(TemporalAdjusters.nextOrSame(DayOfWeek.TUESDAY));
+
+        LocalDate firstTuesday = LocalDate.of(year, month, 1).with(TemporalAdjusters.nextOrSame(DayOfWeek.TUESDAY));
         System.out.println("firstTuesday: " + firstTuesday);
 
+        LocalDate todayNow = LocalDate.now();
+        LocalDate firstDayOfMonth = todayNow.withDayOfMonth(1);
+        System.out.println("TODAY: " + firstDayOfMonth);
+
         LocalDate today = LocalDate.of(2013, 11, 9); // Saturday
+
         TemporalAdjuster NEXT_WORKDAY = w -> {
             LocalDate result = (LocalDate) w;
             do {
