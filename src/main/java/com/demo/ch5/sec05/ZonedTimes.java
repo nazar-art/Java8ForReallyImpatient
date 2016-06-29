@@ -44,6 +44,13 @@ public class ZonedTimes {
 
         nextMeeting = meeting.plus(Period.ofDays(7)); // OK
         System.out.println("nextMeeting: " + nextMeeting);
+
+        //
+        ZonedDateTime chinaDate = ZonedDateTime.of(
+                LocalDate.of(2013, 10, 27), // China New Year Date should be here
+                LocalTime.of(2, 30),
+                ZoneId.of("Asia/Hong_Kong"));
+        System.out.println("China date: " + chinaDate);
     }
 }
 

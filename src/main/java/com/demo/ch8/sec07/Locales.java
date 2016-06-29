@@ -1,7 +1,9 @@
 package com.demo.ch8.sec07;
 
+import java.time.ZoneId;
 import java.util.*;
-import java.util.stream.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Locales {
     public static void main(String[] args) {
@@ -13,5 +15,15 @@ public class Locales {
         Locale bestMatch = Locale.lookup(ranges,
                 Arrays.asList(Locale.getAvailableLocales()));
         System.out.println(bestMatch);
+
+        //
+        ArrayList<Locale> localesList = new ArrayList<>();
+        Collections.addAll(localesList, Locale.getAvailableLocales());
+        System.out.println(localesList);
+
+        //
+        System.out.println("\nZONED IDS:");
+        Set<String> zoneIdsSet = ZoneId.getAvailableZoneIds().stream().collect(Collectors.toSet());
+        zoneIdsSet.forEach(System.out::println);
     }
 }
