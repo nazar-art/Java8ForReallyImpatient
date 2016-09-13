@@ -11,8 +11,8 @@ public class UsersGeneratorForTFX {
 
     public static final String PERFORMANCE_USER_PREFIX = "perf_user_";
 
-    public static final int FROM_USER_COUNT = 108761;
-    public static final int TO_USER_COUNT   = 120761;
+    public static final int FROM_USER_COUNT = 110473;
+    public static final int TO_USER_COUNT   = 120373;
 
     public static final int STEP_TO_INCREMENT = 100;
     public static final String FILE_LOCATION = "src/main/resources/userlist.csv";
