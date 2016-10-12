@@ -54,7 +54,7 @@ public enum Country implements Serializable {
     MA("Morocco", "MA", "MAR", "MA", "504", "+212"), //
     RU("Russian Federation", "RU", "RUS", "RUS", "643", "+7"), //
     TN("Tunisia", "TN", "TUN", "TN", "788", "+216"), //    
-    // the list below shouldn't be shown in drop-downs on frontend
+    //
     XX("Autres", "XX", "XXX", "XX", "000", "+000"), //
     YU("Serbie-Monténégro", "YU", "YUY", "YU", "001", "+001"), //
     AF("Afghanistan", "AF", "AFG", "AFG", "004", "+93"), //
