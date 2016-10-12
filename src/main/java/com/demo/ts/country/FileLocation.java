@@ -1,14 +1,14 @@
-package com.demo.wkts.country;
+package com.demo.ts.country;
 
 public enum FileLocation {
-    OFFERS_V("src/main/resources/wkts/offers/offers_v.csv"),
-    OFFERS_F("src/main/resources/wkts/offers/offers_f.csv"),
+    OFFERS_V("src/main/resources/ts/offers/offers_v.csv"),
+    OFFERS_F("src/main/resources/ts/offers/offers_f.csv"),
 
-    OFFERS_F_26K("src/main/resources/wkts/precondition/OffersFreight_26k.csv"),
-    OFFERS_F_50K("src/main/resources/wkts/precondition/OffersFreight_50k.csv"),
+    OFFERS_F_26K("src/main/resources/ts/precondition/OffersFreight_26k.csv"),
+    OFFERS_F_50K("src/main/resources/ts/precondition/OffersFreight_50k.csv"),
 
-    SEARCHES("src/main/resources/wkts/searches/searches.csv"),
-    SEARCHES_REG("src/main/resources/wkts/searches/searchesreg.csv"),
+    SEARCHES("src/main/resources/ts/searches/searches.csv"),
+    SEARCHES_REG("src/main/resources/ts/searches/searchesreg.csv"),
     ;
 
     private String path;

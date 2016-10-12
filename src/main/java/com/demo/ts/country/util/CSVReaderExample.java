@@ -1,6 +1,6 @@
-package com.demo.wkts.country.util;
+package com.demo.ts.country.util;
 
-import com.demo.wkts.country.FileLocation;
+import com.demo.ts.country.FileLocation;
 
 public class CSVReaderExample {
     public static void main(String[] args) {

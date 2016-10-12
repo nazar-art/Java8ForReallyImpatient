@@ -1,4 +1,4 @@
-package com.demo.wkts.country;
+package com.demo.ts.country;
 
 import java.io.Serializable;
 import java.util.HashMap;
