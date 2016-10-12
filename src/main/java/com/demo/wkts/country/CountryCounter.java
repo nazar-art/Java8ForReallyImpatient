@@ -15,10 +15,6 @@ public class CountryCounter {
 
 
     public static void main(String[] args) {
-        // read file
-        // print to console info about countries at this file
-        // print which country isn't presented at list
-
         /*processPath(FileLocation.OFFERS_V);
         processPath(FileLocation.OFFERS_F);
         processPath(FileLocation.OFFERS_F_26K);
@@ -30,9 +26,6 @@ public class CountryCounter {
         /*for (FileLocation fileLocation : FileLocation.values()) {
             processPath(fileLocation);
         }*/
-
-
-//        System.out.println(countryMap);
         printMap();
     }
 
@@ -44,7 +37,6 @@ public class CountryCounter {
                 .sorted(Map.Entry.<Country, Long>comparingByValue().reversed())
                 .forEachOrdered(x -> result.put(x.getKey(), x.getValue()));
 
-        //then you just access the reversedMap however you like...
         for (Map.Entry entry : result.entrySet()) {
             System.out.println(entry.getKey() + ", " + entry.getValue());
         }
