@@ -4,10 +4,10 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class CountryCounter {
 
@@ -20,12 +20,32 @@ public class CountryCounter {
         processPath(FileLocation.OFFERS_F_26K);
         processPath(FileLocation.OFFERS_F_50K);*/
 
-        processPath(FileLocation.SEARCHES);
+//        processPath(FileLocation.SEARCHES);
         processPath(FileLocation.SEARCHES_REG);
 
         /*for (FileLocation fileLocation : FileLocation.values()) {
             processPath(fileLocation);
         }*/
+
+
+        /*CountryCounter counter = new CountryCounter();
+        try {
+            Map<Country, Long> result = counter.count(Paths.get(".", FileLocation.OFFERS_F.getFilePath()));
+            countryMap.putAll(result);
+
+            result = counter.count(Paths.get(".", FileLocation.OFFERS_V.getFilePath()));
+            countryMap.putAll(result);
+
+            result = counter.count(Paths.get(".", FileLocation.OFFERS_F_26K.getFilePath()));
+            countryMap.putAll(result);
+
+            result = counter.count(Paths.get(".", FileLocation.OFFERS_F_50K.getFilePath()));
+            countryMap.putAll(result);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
+
+
         printMap();
     }
 
@@ -96,5 +116,20 @@ public class CountryCounter {
         );*/
 //        Map<String, Integer> countryMap = Country.getCountryMap();
 //        Map<Country, Long> countryMap = Country.getCountryMap();
+    }
+
+    public Map<Country, Long> count(Path path) throws IOException {
+        return Files.lines(path)
+                .flatMap(this::getRelevantCells)
+                .map(Country::getByCode)
+                .filter(Objects::nonNull)
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+//                .filter(country -> country != null)
+//                .collect(Collectors.toMap(country -> country, country -> 1L, (c1, c2) -> c1 + c2));
+    }
+
+    private Stream<String> getRelevantCells(String line) {
+        String[] cells = line.split(",");
+        return Stream.of(cells[0], cells[8]);
     }
 }

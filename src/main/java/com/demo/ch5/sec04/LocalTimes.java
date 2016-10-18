@@ -13,5 +13,14 @@ public class LocalTimes {
 
         LocalTime wakeup = bedtime.plusHours(8); // wakeup is 6:30
         System.out.println("wakeup: " + wakeup);
+
+
+        LocalTime low = LocalTime.of(8, 0);
+        LocalTime high = LocalTime.of(17, 0);
+        if (rightNow.isAfter(low) && rightNow.isBefore(high)) {
+            System.out.println("it is a day");
+        } else {
+            System.out.println("it is a night");
+        }
     }
 }

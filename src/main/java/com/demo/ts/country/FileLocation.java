@@ -9,6 +9,8 @@ public enum FileLocation {
 
     SEARCHES("src/main/resources/ts/searches/searches.csv"),
     SEARCHES_REG("src/main/resources/ts/searches/searchesreg.csv"),
+
+    FOLDER_FOR_UPDATE_RESOURCES("src/main/resources/ts/updated/"),
     ;
 
     private String path;
