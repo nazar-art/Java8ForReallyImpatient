@@ -79,10 +79,6 @@ public class CountryCounter {
             String arrivalCntCode = lineArgs[0];
             String departureCntCode = lineArgs[8];
 
-            if (arrivalCntCode == null || departureCntCode == null) {
-                return;
-            }
-
             Country arrCountry = Country.getByCode(arrivalCntCode);
             Country depCountry = Country.getByCode(departureCntCode);
 

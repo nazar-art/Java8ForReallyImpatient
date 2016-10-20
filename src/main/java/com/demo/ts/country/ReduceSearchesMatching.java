@@ -16,8 +16,10 @@ public class ReduceSearchesMatching {
 
     public static final String SAN_MARINO_ROW = "F,OC,66,,PERPIGNAN,66000,289307,4270255,RSM,,,,SAN MARINO,47897,1245256,4391341,20000,0,134,MG,N,N,0";
 
+    public static final String HEADER = "OF_DEPARTURE_COUNTRY,OF_DEPLV2,OF_DEPLV1,OF_DEPLV0,OF_DEPARTURE_CITY,OF_DEPARTURE_ZIPCODE,OF_DEPARTURE_COORDINATE_X,OF_DEPARTURE_COORDINATE_Y,OF_ARRIVAL_COUNTRY,OF_ARRLV2,OF_ARRLV1,OF_ARRLV0,OF_ARRIVAL_CITY,OF_ARRIVAL_ZIPCODE,OF_ARRIVAL_COORDINATE_X,OF_ARRIVAL_COORDINATE_Y,OF_WEIGHT,OF_VOLUME,OF_LENGTH,OF_GOODS_KND,OF_TAIL_LIFT,OF_PALLETS_EXCHANGE,OF_NB_PALLETS";
+
     public static void main(String[] args) {
-//        fillFileWithPercentage(FileLocation.SEARCHES, 0.7);
+        fillFileWithPercentage(FileLocation.SEARCHES, 0.7);
         fillFileWithPercentage(FileLocation.SEARCHES_REG, 0.7);
     }
 
@@ -50,6 +52,8 @@ public class ReduceSearchesMatching {
             if (!Files.exists(pathToSave)) {
                 Files.createFile(pathToSave);
             }
+            // set the header
+            populatedList.set(0, HEADER);
 
             Files.write(pathToSave, populatedList, Charset.defaultCharset(), StandardOpenOption.TRUNCATE_EXISTING);
         } catch (IOException e) {
